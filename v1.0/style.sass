@@ -6,6 +6,7 @@ body
   height: 100%
   width: 100%
   margin: 0
+  background-color: #060f2d
 
 #profileContainer
   background-color: white
@@ -15,7 +16,7 @@ body
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
-  display: flex
+  display: none
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
   #profilePhoto,
   #profileDescription
@@ -27,3 +28,9 @@ body
     background-position: center
   #profileDescription
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)
+    #title
+      font-family:  $Title_Font
+      text-align: center
+      width: 100%
+      font-size: 32px
+      margin-top: 30px
