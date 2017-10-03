@@ -13,6 +13,9 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
+
   <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
   <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/touch-icon-iphone-retina.png">
@@ -57,6 +60,15 @@
   <span>My Story.</span>
 </div>
 
+<div unselectable='on' id='map' class="unselectable" onselectstart='return false;' onmousedown="return false;">
+  <div class='map-overlay-container'>
+    <div class='map-overlay'>
+      <h2 id='location-title'></h2>
+      <p id='location-description'></p>
+    </div>
+  </div>
+</div>
+
 <div id="copycontainer">
   <span>
     Maksym Dmukhovskyy ©
@@ -67,5 +79,7 @@
 <script type="text/javascript" src="assets/jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="assets/particles/particles.min.js"></script>
 <script type="text/javascript" src="script.js" charset="UTF-8"></script>
+<script type="text/javascript" src='components/map/map.js'></script>
+<script type="text/javascript" src='components/topMenu/menu.js'></script>
 </body>
 </html>
