@@ -13,18 +13,8 @@ var description = document.getElementById('location-description');
 
 var locations = [{
     "id": "0",
-    "title": "My story",
-    "description": "Start the jorney",
-    "camera": {
-        center: [16.5234375, 47.81315451752767],
-        zoom: 4,
-        speed: 0.3,
-        curve: 1
-    }
-}, {
-    "id": "1",
     "title": "Sokal",
-    "description": "This is where hip-hop was born, where the Yankees became a dynasty and where you can find New York City's leading zoo and botanical garden.",
+    "description": "Story 1 text.",
     "camera": {
         center: [24.280156, 50.486354],
         zoom: 12.21,
@@ -33,9 +23,9 @@ var locations = [{
         curve: 1
     }
 }, {
-    "id": "2",
+    "id": "1",
     "title": "Brescia",
-    "description": "No matter how hip it looks on TV, NYC's most populous borough is best experienced in person. Read on to find out about live music, Prospect Park, Nets basketball and more.",
+    "description": "Story 2 text..",
     "camera": {
         center: [10.211802, 45.541553],
         bearing: -8.9,
@@ -44,9 +34,9 @@ var locations = [{
         curve: 1
     }
 }, {
-    "id": "3",
+    "id": "2",
     "title": "London",
-    "description": "Even if you think you know Manhattan—its world-class museums, fine dining and unforgettable views—the borough always has something new and exciting in store.",
+    "description": "Story 3 text.",
     "camera": {
         center: [-0.127758, 51.507351],
         bearing: 25.3,
@@ -55,9 +45,9 @@ var locations = [{
         curve: 1
     }
 }, {
-    "id": "4",
+    "id": "3",
     "title": "",
-    "description": "Who knows whats next!",
+    "description": "Ending Text!",
     "camera": {
         center: [16.5234375, 47.81315451752767],
         zoom: 4,
@@ -68,29 +58,38 @@ var locations = [{
 
 
 function playback(index) {
+    if (index === 0) {
+        firstPlay = true;
+    }
     title.textContent = locations[index].title;
     description.textContent = locations[index].description;
 
-    // Animate the map position based on camera properties
     map.flyTo(locations[index].camera);
 
     map.once('moveend', function() {
-        // Duration the slide is on screen after interaction
         window.setTimeout(function() {
-            // Increment index
             index = (index + 1 === locations.length) ? 0 : index + 1;
+            if (firstPlay && index === 0) {
+                return;
+            }
             playback(index);
-        }, 7000); // After callback, show the location for 3 seconds.
+        }, 7000);
     });
 }
 
-// Display the last title/description first
-title.textContent = locations[locations.length - 1].title;
-description.textContent = locations[locations.length - 1].description;
+$window.resize(function() {
+    mapContainerHeight = $mapContainer[0].clientHeight;
+    menuHeight = $('#menu')[0].clientHeight; 
+    centerSpace = Math.round(($windowHeight - mapContainerHeight - menuHeight) / 2);
+    mapOfsetStart = $mapContainer[0].offsetTop - menuHeight - centerSpace;
+});
 
-window.setTimeout(function() {
-     playback(0);
-}, 5000);
+$window.scroll(function() {
+    if (mapScrollStart === false && $window[0].scrollY >= mapOfsetStart) {
+        mapScrollStart = true;
+        playback(0);
+    }
+});
 
 map.on('load', function () {
 
