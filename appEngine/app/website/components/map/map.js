@@ -8,6 +8,7 @@ interactive: false
 });
 
 
+
 var title = document.getElementById('location-title');
 var description = document.getElementById('location-description');
 
@@ -941,11 +942,7 @@ map.on('load', function () {
                     [ 10.235816, 45.532542 ],
                     [ 10.232952, 45.535434 ],
                     [ 10.232129, 45.536249 ],
-                    [ 10.230975, 45.543365 ],
-                    [ 10.224567, 45.545045 ],
-                    [ 10.223089, 45.540302 ],
-                    [ 10.222626, 45.53879 ],
-                    [ 10.221132, 45.538999 ],
+                    [ 10.225663, 45.538219 ],
                     ]
                 }
             }
@@ -959,4 +956,100 @@ map.on('load', function () {
             "line-width": 6
         }
     });
+
+    map.addSource('flight', {
+        "type": "geojson",
+        "data": flight
+    });
+
+    map.addLayer({
+        "id": "flight",
+        "source": "flight",
+        "type": "line",
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#c16060",
+            "line-width": 6
+        }
+    });
+
+    map.addLayer({
+            "id": "points",
+            "type": "symbol",
+            "source": {
+                "type": "geojson",
+                "data": {
+                    "type": "FeatureCollection",
+                    "features": [{
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [24.280813, 50.476434]
+                        },
+                        "properties": {
+                            "icon": "museum"
+                        }
+                    }, {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [10.225663, 45.538219]
+                        },
+                        "properties": {
+                            "icon": "college"
+                        }
+                    },
+                    {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-0.088234, 51.512742]
+                    },
+                    "properties": {
+                        "icon": "rocket"
+                    }
+                 }]
+                }
+            },
+            "layout": {
+                "icon-image": "{icon}-15",
+                "text-field": "{title}",
+                "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                "text-offset": [0, 0.4],
+                "text-anchor": "top"
+            }
+        });
 });
+
+
+var origin = [10.215054, 45.544694];
+var destination = [-0.088234, 51.512742];
+
+
+var flight = {
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "geometry": {
+            "type": "LineString",
+            "coordinates": [
+                origin,
+                destination
+            ]
+        }
+    }]
+};
+
+var lineDistance = turf.lineDistance(flight.features[0], 'kilometers');
+
+var arc = [];
+
+for (var i = 0; i < lineDistance; i++) {
+    var segment = turf.along(flight.features[0], i / 1000 * lineDistance, 'kilometers');
+    arc.push(segment.geometry.coordinates);
+}
+
+flight.features[0].geometry.coordinates = arc;
