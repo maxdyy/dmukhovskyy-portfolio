@@ -7,15 +7,13 @@ center: [16.5234375, 47.81315451752767],
 interactive: false
 });
 
-
-
 var title = document.getElementById('location-title');
 var description = document.getElementById('location-description');
 
 var locations = [{
     "id": "0",
     "title": "Sokal",
-    "description": "Story 1 text.",
+    "description": "My story begins in the year 1993, in a small city of Sokal in west Ukraine.",
     "camera": {
         center: [24.280156, 50.486354],
         zoom: 12.21,
@@ -26,7 +24,7 @@ var locations = [{
 }, {
     "id": "1",
     "title": "Brescia",
-    "description": "Story 2 text..",
+    "description": "In 2004 I moved to Italy. I lived in Brescia for 13 years, where I studied languages and economics.",
     "camera": {
         center: [10.211802, 45.541553],
         bearing: -8.9,
@@ -37,7 +35,7 @@ var locations = [{
 }, {
     "id": "2",
     "title": "London",
-    "description": "Story 3 text.",
+    "description": "In 2017 I decided to pursue my passion and moved to London. Here I work as a software engeneer at Smartzer, where I make the world a better place with amazing interactive 'Shoppable' videos",
     "camera": {
         center: [-0.127758, 51.507351],
         bearing: 25.3,
@@ -48,7 +46,7 @@ var locations = [{
 }, {
     "id": "3",
     "title": "",
-    "description": "Ending Text!",
+    "description": "",
     "camera": {
         center: [16.5234375, 47.81315451752767],
         zoom: 4,
@@ -74,6 +72,9 @@ function playback(index) {
                 return;
             }
             playback(index);
+            if (index === 3) {
+                $('.map-overlay').fadeTo('opacity', 0);
+            }
         }, 7000);
     });
 }
@@ -89,6 +90,7 @@ $window.scroll(function() {
     if (mapScrollStart === false && $window[0].scrollY >= mapOfsetStart) {
         mapScrollStart = true;
         playback(0);
+        $('.map-overlay').fadeTo('opacity', 1);
     }
 });
 

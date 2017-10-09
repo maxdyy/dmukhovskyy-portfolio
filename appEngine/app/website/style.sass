@@ -9,19 +9,39 @@ body
   user-select: none
   -webkit-tap-highlight-color: transparent
 
-  *
-    user-select: none
+*
+  user-select: none
 
-  ::-moz-selection 
-    background: transparent
+::-moz-selection 
+  background: transparent
 
-  ::selection 
-    background: transparent
+::selection 
+  background: transparent
 
-  .unselectable
-    -webkit-user-select: none
-    -moz-user-select: none
-    user-select: none
+.unselectable
+  -webkit-user-select: none
+  -moz-user-select: none
+  user-select: none
+
+a:link
+  color: #000
+  text-decoration: none
+
+
+a:visited
+  color: #000
+  text-decoration: none
+
+
+a:hover
+  color: #000
+  text-decoration: none
+
+
+a:active
+  color: #000
+  text-decoration: none
+
 
 
 @import 'components/map/style.sass'
