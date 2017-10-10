@@ -42,7 +42,45 @@ a:active
   color: #000
   text-decoration: none
 
+@mixin defaultHD
+  @media all and (max-width: 1280px), all and (max-height: 720px)
+    @content
 
+@mixin defaultTabletLarge
+  @media all and (max-width: 1100px), all and (max-height: 576px)
+    @content
+
+@mixin defaultTablet
+  @media all and (max-width: 960px), all and (max-height: 540px)
+    @content
+
+@mixin defaultTabletSmall
+  @media all and (max-width: 896px), all and (max-height: 504px)
+    @content
+
+@mixin defaultMobileLarge
+  @media all and (max-width: 768px), all and (max-height: 432px)
+    @content
+
+@mixin defaultMobile
+  @media all and (max-width: 640px), all and (max-height: 360px)
+    @content
+
+@mixin defaultMobileSmall
+  @media all and (max-width: 560px), all and (max-height: 320px)
+    @content
+
+@mixin defaultMobileMini
+  @media all and (max-width: 512px), all and (max-height: 288px)
+    @content
+
+@mixin defaultMobileXS
+  @media all and (max-width: 400px), all and (max-height: 250px)
+    @content
+
+@mixin defaultMobileXXS
+  @media all and (max-width: 350px)
+    @content
 
 @import 'components/map/style.sass'
 @import 'components/topMenu/style.sass'
