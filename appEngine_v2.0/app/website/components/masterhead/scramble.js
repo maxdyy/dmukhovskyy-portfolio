@@ -7,7 +7,6 @@ var _createClass = function() {
       if ("value" in descriptor) descriptor.writable = true;
       Object.defineProperty(target, descriptor.key, descriptor);
     }
-
   }
   return function(Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; };
 }();
@@ -21,9 +20,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var TextScramble = function() {
   function TextScramble(el) {
     _classCallCheck(this, TextScramble);
-
     this.el = el;
-    this.chars = 'я!_б_д_г_ч_ю_ж_э_';
+    this.chars = 'я_ш_д_г_ч_ю_ж_э_ц';
     this.update = this.update.bind(this);
   }
 
@@ -31,7 +29,6 @@ var TextScramble = function() {
     key: 'setText',
     value: function setText(newText) {
       var _this = this;
-
       var oldText = this.el.innerText;
       var length = Math.max(oldText.length, newText.length);
       var promise = new Promise(function(resolve) {
@@ -39,15 +36,13 @@ var TextScramble = function() {
       });
       this.queue = [];
       for (var i = 0; i < length; i++) {
-
+        
         var from = oldText[i] || '';
         var to = newText[i] || '';
         var start = Math.floor(Math.random() * 40);
         var end = start + Math.floor(Math.random() * 40);
         this.queue.push({ from: from, to: to, start: start, end: end });
       }
-
-
       cancelAnimationFrame(this.frameRequest);
       this.frame = 0;
       this.update();
@@ -80,8 +75,6 @@ var TextScramble = function() {
           output += from;
         }
       }
-
-
       this.el.innerHTML = output;
       if (complete === this.queue.length) {
         this.resolve();
@@ -96,7 +89,6 @@ var TextScramble = function() {
       return this.chars[Math.floor(Math.random() * this.chars.length)];
     }
   }]);
-
   return TextScramble;
 }();
 
@@ -112,7 +104,7 @@ var fx = new TextScramble(el);
 var counter = 0;
 var next = function next() {
   fx.setText(phrases[counter]).then(function() {
-    setTimeout(next, 1750);
+    setTimeout(next, 2500);
   });
   counter = (counter + 1) % phrases.length;
 };
