@@ -1,0 +1,116 @@
+// fade in and fade out layers for smooth particles transition
+#fade-gradient-in,
+#fade-gradient-out
+  height: 50px
+  width: 100%
+  position: absolute
+  left: 0
+  z-index: 1
+#fade-gradient-in
+  top: 0
+  background: -moz-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(250,250,250,0) 100%)
+  background: -webkit-linear-gradient(top, rgba(250,250,250,1) 0%,rgba(250,250,250,0) 100%)
+  background: linear-gradient(to bottom, rgba(250,250,250,1) 0%,rgba(250,250,250,0) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 )
+#fade-gradient-out
+  bottom: 0
+  background: -moz-linear-gradient(top, rgba(250,250,250,0) 0%, rgba(250,250,250,1) 100%)
+  background: -webkit-linear-gradient(top, rgba(250,250,250,0) 0%,rgba(250,250,250,1) 100%)
+  background: linear-gradient(to bottom, rgba(250,250,250,0) 0%,rgba(250,250,250,1) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 )
+
+.section-smart
+  width: 100%
+  height: 700px
+  position: relative
+  .smart-inner-wrapper
+    height: 100%
+    width: 100%
+    position: relative
+    .smart-inner-content
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      width: 100%
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      color: $DarkShades
+      h5
+        padding: 15px
+        background-color: rgba(250, 250, 250, 0.6)
+        border-radius: 5px
+        margin-top: 75px
+        margin-bottom: 35px
+        font-size: 28px
+        font-family: $Text_Mono
+      hr
+        width: 280px
+        border: 0
+        height: 1px
+        background-image: linear-gradient(to right, rgba(48, 56, 67, 0), rgba(48, 56, 67, 0.75), rgba(48, 56, 67, 0))
+      .smart-intro
+        margin-top: 25px
+        width: 495px
+        text-align: center
+        font-size: 16px
+      .smart-cards-wrapper
+        margin-top: 55px
+        display: flex
+        justify-content: center
+        align-items: center
+        .smart-card
+          height: 230px
+          width: 230px
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          border-radius: 12px
+          margin: 0 20px
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+        .smart-card.specific
+          background-image: linear-gradient(135deg, #73ea66 0%, #499aa0 100%)
+        .smart-card.measurable
+          background-image: linear-gradient(135deg, #498ba0 0%, #669aea 100%)
+        .smart-card.attainable
+          height: 275px
+          width: 275px
+          margin: 0 7px
+          background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+          .card-icon
+            height: 85px
+            width: 85px
+          .card-title
+            margin: 20px 0
+            font-size: 20px
+          .card-text
+            font-size: 15px
+        .smart-card.realistic
+          background-image: linear-gradient(135deg, #924aa1 0%, #ea667e 100%)
+        .smart-card.timely
+          background-image: linear-gradient(135deg, #ea6666 0%, #a08e49 100%)
+        .card-icon
+          height: 65px
+          width: 65px
+          display: flex
+          justify-content: center
+          align-items: center
+          background-color: $LightShades
+          border-radius: 50%
+          .fa
+            color: $DarkShades
+        .card-title
+          margin: 15px 0
+          color: $LightShades
+          font-size: 16px
+          letter-spacing: 0.5px
+        .card-text
+          color: $LightShades
+          font-size: 13px
+          font-weight: 300
+          padding: 0 10%
+          text-align: center
+
