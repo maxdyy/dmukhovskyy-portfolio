@@ -1,5 +1,6 @@
 $Title_Font: 'Raleway', sans-serif
-$Text_Font: 'Open Sans', sans-serif
+$Text_Font: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif
+$Text_Mono: 'Fira Mono', monospace
 
 $LightShades: #FAFAFA
 $LightAccent: #ACAEAB
@@ -55,17 +56,15 @@ body
   background-color: $LightShades
   -webkit-tap-highlight-color: transparent
   font-family: $Text_Font
+  text-rendering: optimizeLegibility
+  overflow-x: hidden
 
-::-moz-selection 
-  background: transparent
-
-::selection 
-  background: transparent
+::-webkit-scrollbar
+  display: none
 
 a:link
   color: #000
   text-decoration: none
-
 
 a:visited
   color: #000
@@ -84,3 +83,4 @@ a:active
 
 @import 'components/menu/style.sass'
 @import 'components/masterhead/style.sass'
+@import 'components/modal/style.sass'

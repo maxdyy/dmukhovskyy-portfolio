@@ -21,7 +21,7 @@ var TextScramble = function() {
   function TextScramble(el) {
     _classCallCheck(this, TextScramble);
     this.el = el;
-    this.chars = 'я_ш_д_г_ч_ю_ж_э_ц';
+    this.chars = '!<>-_\\/[]{}—=+*^?#я_ш_д_г_ч_ю_ж_э_ц';
     this.update = this.update.bind(this);
   }
 
@@ -36,7 +36,6 @@ var TextScramble = function() {
       });
       this.queue = [];
       for (var i = 0; i < length; i++) {
-        
         var from = oldText[i] || '';
         var to = newText[i] || '';
         var start = Math.floor(Math.random() * 40);
@@ -104,7 +103,7 @@ var fx = new TextScramble(el);
 var counter = 0;
 var next = function next() {
   fx.setText(phrases[counter]).then(function() {
-    setTimeout(next, 2500);
+    setTimeout(next, 4500);
   });
   counter = (counter + 1) % phrases.length;
 };

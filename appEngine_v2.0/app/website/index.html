@@ -11,7 +11,7 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon-16x16.png">
   <link rel="shortcut icon" type="image/png" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600|Fira+Mono" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="style.min.css">
   <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
@@ -36,13 +36,13 @@
           </a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="">About</a></li>
+            <li><a class="modal-trigger" href="#modal1">About</a></li>
             <li><a href="">S.M.A.R.T.</a></li>
             <li><a href="">Tech Stack</a></li>
             <li><a href="">Contacts</a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
-            <li><a href="">About</a></li>
+            <li><a class="modal-trigger" href="#modal1">About</a></li>
             <li><a href="">S.M.A.R.T.</a></li>
             <li><a href="">Tech Stack</a></li>
             <li><a href="">Contacts</a></li>
@@ -53,12 +53,47 @@
   </header>
   <section class="section-masterhead">
     <div class="masterhead-wrapper">
-      <p class="masterhead-text">
-        Web Design is <span class="scramble-text">a state of mind</span>
-      </p>
+      <div class="masterhead-text">
+        <span>Web Development is </span>
+        <span class="scramble-text"></span>
+      </div>
+      <hr>
+      <div class="masterhead-text-2">
+        <span>And it's a lot more.</span>
+        <span>Personally I'm pumped about Web Development and Web Design.</span>
+        <span>My name is Maksym, and this is my story.</span>
+        <button type="button">
+          <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Read More</a>
+        </button>
+      </div>
     </div>
     <div class="masterhead-round-bottom"></div>
   </section>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="modal-profile">
+        <div class="modal-avatar">
+          <div class="avatar-img-wrapper">
+            <img src="images/avatar.png" alt="photo of Maksym">
+          </div>
+          <div class="modal-name-contacts">
+            <div class="modal-name">
+              <span>Maksym Dmukhovskyy</span>
+            </div>
+            <div class="modal-contacts">
+              <div><span class="contact-title">EMAIL</span><span class="contact-value">dm.maksym@gmail.com</span></div>
+              <div><span class="contact-title">LOCATION</span><span class="contact-value">Brescia, ITALY</span></div>
+              <div><span class="contact-title">SOCIAL</span><span class="contact-value"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-light btn">Close</a>
+    </div>
+  </div>
   <script type="text/javascript" src="assets/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
   <script type="text/javascript" src="script.min.js" charset="UTF-8"></script>
