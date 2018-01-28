@@ -1,5 +1,5 @@
 $Text_Font: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif
-$Text_Mono: 'Fira Mono', monospace
+$Text_Mono: "Fira Mono", monospace
 
 $LightShades: #FAFAFA
 $LightAccent: #ACAEAB
@@ -7,43 +7,43 @@ $MainBrandColor: #CA545D
 $DarkAccent: #8B91A3
 $DarkShades: #303843
 
-@mixin defaultHD
+=defaultHD
   @media all and (max-width: 1280px), all and (max-height: 720px)
     @content
 
-@mixin defaultTabletLarge
+=defaultTabletLarge
   @media all and (max-width: 1100px), all and (max-height: 576px)
     @content
 
-@mixin defaultTablet
+=defaultTablet
   @media all and (max-width: 960px), all and (max-height: 540px)
     @content
 
-@mixin defaultTabletSmall
+=defaultTabletSmall
   @media all and (max-width: 896px), all and (max-height: 504px)
     @content
 
-@mixin defaultMobileLarge
+=defaultMobileLarge
   @media all and (max-width: 768px), all and (max-height: 432px)
     @content
 
-@mixin defaultMobile
+=defaultMobile
   @media all and (max-width: 640px), all and (max-height: 360px)
     @content
 
-@mixin defaultMobileSmall
+=defaultMobileSmall
   @media all and (max-width: 560px), all and (max-height: 320px)
     @content
 
-@mixin defaultMobileMini
+=defaultMobileMini
   @media all and (max-width: 512px), all and (max-height: 288px)
     @content
 
-@mixin defaultMobileXS
+=defaultMobileXS
   @media all and (max-width: 400px), all and (max-height: 250px)
     @content
 
-@mixin defaultMobileXXS
+=defaultMobileXXS
   @media all and (max-width: 350px)
     @content
 
@@ -80,8 +80,8 @@ a:active
 .brandColorText
   color: $MainBrandColor
 
-@import 'components/menu/style.sass'
-@import 'components/masterhead/style.sass'
-@import 'components/modal/style.sass'
-@import 'components/smart/style.sass'
-@import 'components/tech/style.sass'
+@import components/menu/style.sass
+@import components/masterhead/style.sass
+@import components/modal/style.sass
+@import components/smart/style.sass
+@import components/tech/style.sass
