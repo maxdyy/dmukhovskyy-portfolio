@@ -8,10 +8,18 @@ var _createClass = function() {
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
-  return function(Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; };
+  return function(Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
 }();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
 
 // ——————————————————————————————————————————————————
 // TextScramble by Justin Windle
@@ -40,7 +48,12 @@ var TextScramble = function() {
         var to = newText[i] || '';
         var start = Math.floor(Math.random() * 40);
         var end = start + Math.floor(Math.random() * 40);
-        this.queue.push({ from: from, to: to, start: start, end: end });
+        this.queue.push({
+          from: from,
+          to: to,
+          start: start,
+          end: end
+        });
       }
       cancelAnimationFrame(this.frameRequest);
       this.frame = 0;
