@@ -1,9 +1,12 @@
 .tech-stack
-  height: 650px
+  height: 670px
   width: 100%
   overflow: hidden
   background: $LightShades
   position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
   h2
     padding: 15px
     margin-top: 55px
@@ -16,12 +19,16 @@
     border: 0
     height: 1px
     background-image: linear-gradient(to right, rgba(48, 56, 67, 0), rgba(48, 56, 67, 0.75), rgba(48, 56, 67, 0))
-
+  .tech-intro
+    margin-top: 25px
+    width: 495px
+    text-align: center
+    font-size: 16px
   .tech-wrapper
     position: absolute
     bottom: 0
     left: 0
-    height: 350px
+    height: 380px
     width: 100%
 
 .bubble
@@ -51,13 +58,13 @@
 
 .atom
   top: 10px
-  animation: floatBubble 45s linear infinite, noiseAtom 11s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseAtom 6s ease-in-out infinite
   left: -200px
   background-image: url("./images/Logos/atom.svg")
 
 .bitbucket
   top: 10px
-  animation: floatBubble 45s linear infinite, noiseBitbucket 11s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseBitbucket 6s ease-in-out infinite
   animation-delay: -6.7s
   left: -200px
   background-image: url("./images/Logos/bitbucket.svg")
@@ -74,7 +81,7 @@
 
 .css
   top: 70px
-  animation: floatBubble 45s linear infinite, noiseCSS 11s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseCSS 8s ease-in-out infinite
   animation-delay: -20s
   left: -200px
   background-image: url("./images/Logos/css.svg")
@@ -83,14 +90,14 @@
 
 .github
   top: 40px
-  animation: floatBubble 45s linear infinite, noiseGithub 11s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseGithub 6s ease-in-out infinite
   animation-delay: -26s
   left: -200px
   background-image: url("./images/Logos/github.svg")
 
 .google-cloud
   top: 15px
-  animation: floatBubble 45s linear infinite, noiseGoogle 11s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseGoogle 7s ease-in-out infinite
   animation-delay: -31s
   left: -200px
   background-image: url("./images/Logos/google-cloud.svg")
@@ -98,7 +105,7 @@
 
 .html
   top: 35px
-  animation: floatBubble 45s linear infinite, noiseHTML 11s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseHTML 6s ease-in-out infinite
   animation-delay: -38s
   left: -200px
   background-image: url("./images/Logos/html.svg")
@@ -107,7 +114,7 @@
 
 .javascript
   top: 190px
-  animation: floatBubble 45s linear infinite, noiseJavascript 11s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseJavascript 7s ease-in-out infinite
   animation-delay: -4.2s
   left: -200px
   background-image: url("./images/Logos/javascript.svg")
@@ -116,21 +123,21 @@
 
 .jQuery
   top: 175px
-  animation: floatBubble 45s linear infinite, noiseJQuery 8s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseJQuery 6s ease-in-out infinite
   animation-delay: -9s
   left: -200px
   background-image: url("./images/Logos/jQuery.svg")
 
 .materialize
   top: 200px
-  animation: floatBubble 45s linear infinite, noiseMaterialize 11s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseMaterialize 8s ease-in-out infinite
   animation-delay: -16.5s
   left: -200px
   background-image: url("./images/Logos/materialize.svg")
 
 .photoshop
   top: 165px
-  animation: floatBubble 45s linear infinite, noisePhotoshop 7s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noisePhotoshop 6s ease-in-out infinite
   animation-delay: -23s
   left: -200px
   background-image: url("./images/Logos/photoshop.svg")
@@ -139,14 +146,14 @@
 
 .python
   top: 170px
-  animation: floatBubble 45s linear infinite, noisePython 11s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noisePython 7s ease-in-out infinite
   animation-delay: -29.7s
   left: -200px
   background-image: url("./images/Logos/python.svg")
 
 .react
   top: 170px
-  animation: floatBubble 45s linear infinite, noiseReact 11s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseReact 7s ease-in-out infinite
   animation-delay: -35s
   left: -200px
   background-image: url("./images/Logos/react.svg")
@@ -154,14 +161,14 @@
 
 .sass
   top: 190px
-  animation: floatBubble 45s linear infinite, noiseSASS 11s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseSASS 6s ease-in-out infinite
   animation-delay: -39s
   left: -200px
   background-image: url("./images/Logos/sass.svg")
 
 .vuetify
   top: 160px
-  animation: floatBubble 45s linear infinite, noiseVuetify 7s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseVuetify 5s ease-in-out infinite
   animation-delay: -42s
   left: -200px
   background-image: url("./images/Logos/vuetify.svg")
