@@ -25,6 +25,12 @@
           &:hover
             color: $DarkShades
 
+          +defaultMobileMini
+            right: 10px
+            left: auto
+            transform: initial
+
+
           .avatar
             height: 100%
             display: flex
@@ -50,6 +56,11 @@
       ul.hide-on-med-and-down li
         width: 110px
 
+      ul.side-nav
+        display: flex
+        flex-direction: column
+        justify-content: center
+
       ul.hide-on-med-and-down li,
       ul.side-nav li
         text-align: center
@@ -58,3 +69,7 @@
           &:hover
             background-color: $DarkShades
             color: $LightShades
+
+      ul.side-nav li a
+        height: 80px
+        line-height: 80px

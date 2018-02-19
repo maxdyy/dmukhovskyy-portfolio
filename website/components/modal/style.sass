@@ -5,9 +5,23 @@
     .modal-profile
       padding: 5% 10% 0 10%
 
+      +defaultMobileLarge
+        padding: 5% 5% 0 5%
+
+
+      +defaultMobile
+        padding: 5% 0 0 0
+
+
       .modal-avatar
         display: flex
         justify-content: space-between
+
+        +defaultMobileSmall
+          flex-direction: column
+          justify-content: center
+          align-items: center
+
 
         .avatar-img-wrapper
           width: 200px
@@ -26,6 +40,15 @@
           display: flex
           flex-direction: column
 
+          +defaultMobileLarge
+            width: 40%
+
+
+          +defaultMobileSmall
+            width: 100%
+            margin-top: 35px
+
+
           .modal-name
             width: 100%
             display: flex
@@ -35,6 +58,12 @@
             letter-spacing: 1px
             font-weight: 600
             margin-bottom: 10px
+
+            +defaultMobileSmall
+              span
+                width: 100%
+                text-align: center
+                margin-bottom: 20px
 
           .modal-contacts
             display: flex

@@ -20,7 +20,6 @@ function _classCallCheck(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 }
-
 // ——————————————————————————————————————————————————
 // TextScramble by Justin Windle
 // ——————————————————————————————————————————————————
