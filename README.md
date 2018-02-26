@@ -7,11 +7,11 @@ This is my first portfolio website
 [**Demo**](https://www.dmukhovskyy.com/)
 
 It's a responsive landing page with different sections.
-Includes some animations and build mainly around material design.
+Includes some animations and it's build mainly around material design.
 
 ## Tech
 
-I've used jQuery, SASS, HTML and a framework called MaterializeCSS to build this website.
+I've used jQuery, SASS, HTML5 and a framework called MaterializeCSS to build this website.
 All parts/sections are single components with their own SASS/JS files.
 
 MaterializeCSS is the main deal here for the UI - [link](http://materializecss.com/)
