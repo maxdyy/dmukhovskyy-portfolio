@@ -10,3 +10,5 @@ handlers:
 
 - url: /
   static_dir: website
+  http_headers:
+    X-Frame-Options: SAMEORIGIN
