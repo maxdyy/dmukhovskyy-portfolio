@@ -70,6 +70,7 @@
   animation: floatBubble 45s linear infinite, noiseAtom 6s ease-in-out infinite
   left: -200px
   background-image: url("./images/Logos/atom.svg")
+  animation-delay: -1.5s
 
 .bitbucket
   top: 10px
@@ -91,7 +92,7 @@
 .css
   top: 70px
   animation: floatBubble 45s linear infinite, noiseCSS 8s ease-in-out infinite
-  animation-delay: -20s
+  animation-delay: -19s
   left: -200px
   background-image: url("./images/Logos/css.svg")
   background-size: 70% 70%
@@ -107,7 +108,7 @@
 .google-cloud
   top: 15px
   animation: floatBubble 45s linear infinite, noiseGoogle 7s ease-in-out infinite
-  animation-delay: -31s
+  animation-delay: -32s
   left: -200px
   background-image: url("./images/Logos/google-cloud.svg")
   background-position: center 70%
@@ -123,7 +124,7 @@
 
 .javascript
   top: 190px
-  animation: floatBubble 45s linear infinite, noiseJavascript 7s ease-in-out infinite
+  animation: floatBubble 45s linear infinite, noiseJavascript 8s ease-in-out infinite
   animation-delay: -4.2s
   left: -200px
   background-image: url("./images/Logos/javascript.svg")
@@ -136,13 +137,6 @@
   animation-delay: -9s
   left: -200px
   background-image: url("./images/Logos/jQuery.svg")
-
-.materialize
-  top: 200px
-  animation: floatBubble 45s linear infinite, noiseMaterialize 8s ease-in-out infinite
-  animation-delay: -16.5s
-  left: -200px
-  background-image: url("./images/Logos/materialize.svg")
 
 .photoshop
   top: 165px
@@ -177,11 +171,18 @@
 
 .react
   top: 160px
-  animation: floatBubble 45s linear infinite, noiseVuetify 5s ease-in-out infinite
-  animation-delay: -42s
+  animation: floatBubble 45s linear infinite, noiseVuetify 6s ease-in-out infinite
+  animation-delay: -42.8s
   left: -200px
   background-image: url("./images/Logos/react.svg")
   background-color: #222
+
+.materialize
+  top: 200px
+  animation: floatBubble 45s linear infinite, noiseMaterialize 8s ease-in-out infinite
+  animation-delay: -16.5s
+  left: -200px
+  background-image: url("./images/Logos/materialize.svg")
 
 @keyframes floatBubble
   0%
@@ -190,152 +191,153 @@
   100%
     left: 2200px
 
-@keyframes noiseAtom
+@keyframes noiseMaterialize
   0%
-    top: 5px
+    transform: translateY(10px)
 
   50%
-    top: 35px
+    transform: translateY(40px)
 
   100%
-    top: 5px
+    transform: translateY(10px)
+
+@keyframes noiseAtom
+  0%
+    transform: translateY(-20px)
+
+  50%
+    transform: translateY(10px)
+
+  100%
+    transform: translateY(-20px)
 
 @keyframes noiseBitbucket
   0%
-    top: 5px
+    transform: translateY(-20px)
 
   50%
-    top: 35px
+    transform: translateY(10px)
 
   100%
-    top: 5px
+    transform: translateY(-20px)
 
 @keyframes noiseBootstrap
   0%
-    top: 5px
+    transform: translateY(-20px)
 
   50%
-    top: 50px
+    transform: translateY(25px)
 
   100%
-    top: 5px
+    transform: translateY(-20px)
 
 @keyframes noiseCSS
   0%
-    top: 70px
+    transform: translateY(35px)
 
   50%
-    top: 30px
+    transform: translateY(-5px)
 
   100%
-    top: 70px
+    transform: translateY(35px)
 
 @keyframes noiseGithub
   0%
-    top: 35px
+    transform: translateY(10px)
 
   50%
-    top: 85px
+    transform: translateY(55px)
 
   100%
-    top: 35px
+    transform: translateY(10px)
 
 @keyframes noiseGoogle
   0%
-    top: 5px
+    transform: translateY(-20px)
 
   50%
-    top: 25px
+    transform: translateY(0px)
 
   100%
-    top: 5px
+    transform: translateY(-20px)
 
 @keyframes noiseHTML
   0%
-    top: 5px
+    transform: translateY(-20px)
 
   50%
-    top: 35px
+    transform: translateY(10px)
 
   100%
-    top: 5px
+    transform: translateY(-20px)
 
 @keyframes noiseJavascript
   0%
-    top: 140px
+    transform: translateY(70px)
 
   50%
-    top: 195px
+    transform: translateY(15px)
 
   100%
-    top: 140px
+    transform: translateY(70px)
 
 @keyframes noiseJQuery
   0%
-    top: 190px
+    transform: translateY(25px)
 
   50%
-    top: 175px
+    transform: translateY(-5px)
 
   100%
-    top: 190px
+    transform: translateY(25px)
 
-@keyframes noiseMaterialize
-  0%
-    top: 160px
-
-  50%
-    top: 200px
-
-  100%
-    top: 160px
 
 @keyframes noisePhotoshop
   0%
-    top: 200px
+    transform: translateY(35px)
 
   50%
-    top: 165px
+    transform: translateY(10px)
 
   100%
-    top: 200px
+    transform: translateY(35px)
 
 @keyframes noisePython
   0%
-    top: 190px
+    transform: translateY(25px)
 
   50%
-    top: 170px
+    transform: translateY(-10px)
 
   100%
-    top: 190px
+    transform: translateY(25px)
 
 @keyframes noiseReact
   0%
-    top: 200px
+    transform: translateY(35px)
 
   50%
-    top: 170px
+    transform: translateY(0px)
 
   100%
-    top: 200px
+    transform: translateY(35px)
 
 @keyframes noiseSASS
   0%
-    top: 170px
+    transform: translateY(-5px)
 
   50%
-    top: 190px
+    transform: translateY(25px)
 
   100%
-    top: 170px
+    transform: translateY(-5px)
 
 @keyframes noiseVuetify
   0%
-    top: 195px
+    transform: translateY(35px)
 
   50%
-    top: 160px
+    transform: translateY(-15px)
 
   100%
-    top: 195px
+    transform: translateY(35px)
