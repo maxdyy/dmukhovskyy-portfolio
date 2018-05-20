@@ -3,8 +3,3 @@ $(document).ready(function() {
   $('.modal').modal();
   $('.scrollspy').scrollSpy();
 })
-
-
-
-
-particlesJS.load('particles-js', 'assets/particles/particles.json', function() {});
