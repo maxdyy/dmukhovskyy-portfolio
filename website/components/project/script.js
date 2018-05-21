@@ -47,22 +47,24 @@ function createProjects(projects) {
       <li class="project-item">\
         <div class="collapsible-header header-'+ project.id +'">\
           <div class="project-icon icon-'+ project.id +'"></div>\
-          <span>'+ project.projectTitle +'</span>\
+          <span class="project-title">'+ project.projectTitle +'</span>\
         </div>\
         <div class="collapsible-body">\
           <div class="project-stack">\
-            <div class="front">\
-              <span class="desc">Front-end:</span>\
-              <span>'+ project.projectFrontEnd +'</span>\
+            <div class="stack-front">\
+              <span class="stack-title">Front-end:</span>\
+              <span class="stack-desc">'+ project.projectFrontEnd +'</span>\
           </div>\
-            <div class="back">\
-              <span class="desc">Back-end:</span>\
-              <span>'+ project.projectBackEnd +'</span>\
+            <div class="stack-back">\
+              <span class="stack-title">Back-end:</span>\
+              <span class="stack-desc">'+ project.projectBackEnd +'</span>\
             </div>\
           </div>\
           <hr class="hr-'+ project.id +'">\
-          <span class="project-desc">'+ project.projectDescription +'</span>\
-          <a class="waves-effect waves-light btn project-btn" href="' + project.projectURL + '">Visit</a>\
+          <div class="project-desc"><span>'+ project.projectDescription +'</span></div>\
+          <div class="project-btn-wrapper">\
+            <a class="waves-effect waves-light btn project-btn" href="' + project.projectURL + '" target="_blank" rel="noreferrer">Visit</a>\
+          </div>\
         </div>\
       </li>\
       ');
