@@ -61,34 +61,34 @@
   height: 150px
   width: 150px
 
-.atom
-  background-image: url("./images/Logos/atom.svg")
-  animation: noiseAtom 6s ease-in-out infinite
+.vscode
+  background-image: url("./images/Logos/vscode.svg")
+  animation: noiseVscode 6s ease-in-out infinite
   animation-delay: -1.5s
-.animation-wrapper-atom
+  background-size: 90px
+.animation-wrapper-vscode
   position: absolute
   animation: floatBubble 45s linear infinite
   animation-delay: -1.5s
 
-.bitbucket
+.git
   top: 10px
-  animation: noiseBitbucket 6s ease-in-out infinite
+  animation: noiseGit 6s ease-in-out infinite
   animation-delay: -6.7s
-  background-image: url("./images/Logos/bitbucket.svg")
-  background-size: 75% 75%
-  background-position: 70% center
-.animation-wrapper-bitbucket
+  background-image: url("./images/Logos/git.svg")
+  background-size: 75px
+.animation-wrapper-git
   position: absolute
   animation: floatBubble 45s linear infinite
   animation-delay: -6.7s
 
-.bootstrap
+.graphql
   top: 50px
-  animation: noiseBootstrap 7s ease-in-out infinite
+  animation: noiseGraphql 7s ease-in-out infinite
   animation-delay: -14s
-  background-image: url("./images/Logos/bootstrap.svg")
-  background-size: cover
-.animation-wrapper-bootstrap
+  background-image: url("./images/Logos/graphql.svg")
+  background-size: 100px
+.animation-wrapper-graphql
   position: absolute
   animation: floatBubble 45s linear infinite
   animation-delay: -14s
@@ -182,13 +182,13 @@
   animation: floatBubble 45s linear infinite
   animation-delay: -29.7s
 
-.vuetify
+.webpack
   top: 170px
-  animation: noiseReact 7s ease-in-out infinite
+  animation: noiseWebpack 7s ease-in-out infinite
   animation-delay: -35s
-  background-image: url("./images/Logos/vuetify.svg")
-  background-position: center 70%
-.animation-wrapper-vuetify
+  background-image: url("./images/Logos/webpack.svg")
+  background-position: center
+.animation-wrapper-webpack
   position: absolute
   animation: floatBubble 45s linear infinite
   animation-delay: -35s
@@ -205,7 +205,7 @@
 
 .react
   top: 160px
-  animation: noiseVuetify 6s ease-in-out infinite
+  animation: noiseReact 6s ease-in-out infinite
   animation-delay: -42.8s
   background-image: url("./images/Logos/react.svg")
   background-color: #222
@@ -214,13 +214,13 @@
   animation: floatBubble 45s linear infinite
   animation-delay: -42.8s
 
-.materialize
+.gulp
   top: 200px
-  animation: noiseMaterialize 8s ease-in-out infinite
+  animation: noiseGulp 8s ease-in-out infinite
   animation-delay: -16.5s
-  background-image: url("./images/Logos/materialize.svg")
-  background-size: contain
-.animation-wrapper-materialize
+  background-image: url("./images/Logos/gulp.svg")
+  background-size: 35px
+.animation-wrapper-gulp
   position: absolute
   animation: floatBubble 45s linear infinite
   animation-delay: -16.5s
@@ -232,7 +232,7 @@
   100%
     transform: rotate(0.0001deg) translateX(2200px)
 
-@keyframes noiseMaterialize
+@keyframes noiseGulp
   0%
     transform: rotate(0.0001deg) translateY(10px)
 
@@ -242,7 +242,7 @@
   100%
     transform: rotate(0.0001deg) translateY(10px)
 
-@keyframes noiseAtom
+@keyframes noiseVscode
   0%
     transform: rotate(0.0001deg) translateY(-20px)
 
@@ -252,7 +252,7 @@
   100%
     transform: rotate(0.0001deg) translateY(-20px)
 
-@keyframes noiseBitbucket
+@keyframes noiseGit
   0%
     transform: rotate(0.0001deg) translateY(-20px)
 
@@ -262,7 +262,7 @@
   100%
     transform: rotate(0.0001deg) translateY(-20px)
 
-@keyframes noiseBootstrap
+@keyframes noiseGraphql
   0%
     transform: rotate(0.0001deg) translateY(-20px)
 
@@ -373,7 +373,7 @@
   100%
     transform: translateY(-5px)
 
-@keyframes noiseVuetify
+@keyframes noiseWebpack
   0%
     transform: translateY(35px)
 
