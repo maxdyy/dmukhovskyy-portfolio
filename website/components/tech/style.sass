@@ -49,10 +49,6 @@
   background-size: 80% 80%
   background-repeat: no-repeat
 
-  // forsing the browser to gpu accelerate
-  // helps lowering the cpu usage for the animation
-  transform: translateZ(0)
-
 .bubble.s
   height: 90px
   width: 90px
@@ -223,6 +219,7 @@
   animation: noiseMaterialize 8s ease-in-out infinite
   animation-delay: -16.5s
   background-image: url("./images/Logos/materialize.svg")
+  background-size: contain
 .animation-wrapper-materialize
   position: absolute
   animation: floatBubble 45s linear infinite
@@ -230,110 +227,110 @@
 
 @keyframes floatBubble
   0%
-    transform: translateX(-150px)
+    transform: rotate(0.0001deg) translateX(-150px)
 
   100%
-    transform: translateX(2200px)
+    transform: rotate(0.0001deg) translateX(2200px)
 
 @keyframes noiseMaterialize
   0%
-    transform: translateY(10px)
+    transform: rotate(0.0001deg) translateY(10px)
 
   50%
-    transform: translateY(40px)
+    transform: rotate(0.0001deg) translateY(40px)
 
   100%
-    transform: translateY(10px)
+    transform: rotate(0.0001deg) translateY(10px)
 
 @keyframes noiseAtom
   0%
-    transform: translateY(-20px)
+    transform: rotate(0.0001deg) translateY(-20px)
 
   50%
-    transform: translateY(10px)
+    transform: rotate(0.0001deg) translateY(10px)
 
   100%
-    transform: translateY(-20px)
+    transform: rotate(0.0001deg) translateY(-20px)
 
 @keyframes noiseBitbucket
   0%
-    transform: translateY(-20px)
+    transform: rotate(0.0001deg) translateY(-20px)
 
   50%
-    transform: translateY(10px)
+    transform: rotate(0.0001deg) translateY(10px)
 
   100%
-    transform: translateY(-20px)
+    transform: rotate(0.0001deg) translateY(-20px)
 
 @keyframes noiseBootstrap
   0%
-    transform: translateY(-20px)
+    transform: rotate(0.0001deg) translateY(-20px)
 
   50%
-    transform: translateY(25px)
+    transform: rotate(0.0001deg) translateY(25px)
 
   100%
-    transform: translateY(-20px)
+    transform: rotate(0.0001deg) translateY(-20px)
 
 @keyframes noiseCSS
   0%
-    transform: translateY(35px)
+    transform: rotate(0.0001deg) translateY(35px)
 
   50%
-    transform: translateY(-5px)
+    transform: rotate(0.0001deg) translateY(-5px)
 
   100%
-    transform: translateY(35px)
+    transform: rotate(0.0001deg) translateY(35px)
 
 @keyframes noiseGithub
   0%
-    transform: translateY(10px)
+    transform: rotate(0.0001deg) translateY(10px)
 
   50%
-    transform: translateY(55px)
+    transform: rotate(0.0001deg) translateY(55px)
 
   100%
-    transform: translateY(10px)
+    transform: rotate(0.0001deg) translateY(10px)
 
 @keyframes noiseGoogle
   0%
-    transform: translateY(-20px)
+    transform: rotate(0.0001deg) translateY(-20px)
 
   50%
-    transform: translateY(0px)
+    transform: rotate(0.0001deg) translateY(0px)
 
   100%
-    transform: translateY(-20px)
+    transform: rotate(0.0001deg) translateY(-20px)
 
 @keyframes noiseHTML
   0%
-    transform: translateY(-20px)
+    transform: rotate(0.0001deg) translateY(-20px)
 
   50%
-    transform: translateY(10px)
+    transform: rotate(0.0001deg) translateY(10px)
 
   100%
-    transform: translateY(-20px)
+    transform: rotate(0.0001deg) translateY(-20px)
 
 @keyframes noiseJavascript
   0%
-    transform: translateY(70px)
+    transform: rotate(0.0001deg) translateY(70px)
 
   50%
-    transform: translateY(15px)
+    transform: rotate(0.0001deg) translateY(15px)
 
   100%
-    transform: translateY(70px)
+    transform: rotate(0.0001deg) translateY(70px)
 
 @keyframes noiseJQuery
   0%
-    transform: translateY(25px)
+    transform: rotate(0.0001deg) translateY(25px)
 
   50%
-    transform: translateY(-5px)
+    transform: rotate(0.0001deg) translateY(-5px)
 
   100%
-    transform: translateY(25px)
+    transform: rotate(0.0001deg) translateY(25px)
 
 
 @keyframes noisePhotoshop
