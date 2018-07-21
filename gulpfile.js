@@ -35,7 +35,7 @@ gulp.task('watch', function () {
   return watch(['./website/components/*/*.s*ss'], {
     ignoreInitial: false
   }, function () {
-    gulp.src('./scss/style.s*ss')
+    gulp.src('./website/style.s*ss')
       .pipe(sourcemaps.init())
       .pipe(sass.sync().on('error', sass.logError))
       .pipe(autoprefixer({
@@ -49,7 +49,7 @@ gulp.task('watch', function () {
         outputStyle: 'compressed'
       }))
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('./scss/ui-dist/'))
+      .pipe(gulp.dest('./website/'))
   }).on('change', function (e) {
     const file = e.split("/").pop();
     notify(`UPDATED - ${file} @ ${timestamp('HH:mm:ss')}`).write('');
