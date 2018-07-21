@@ -1,4 +1,20 @@
 import React, { Component } from "react"
+import { dmukhovskyy_en } from "../../localization/content.json"
+
+const { footer } = dmukhovskyy_en
+const {
+  messageTitle,
+  messageText,
+  connectTitle,
+  twitter,
+  codepen,
+  github,
+  linkedIn,
+  mail,
+  copyright,
+  gitRepo,
+  license,
+} = footer
 
 class Footer extends Component {
   render () {
@@ -7,39 +23,38 @@ class Footer extends Component {
         <div className="container">
           <div className="row">
             <div className="col l6 m8 s12 thanks">
-              <h5 className="white-text">Thanks for passing by</h5>
-              <p className="grey-text text-lighten-4">I truly appreciate the time you spent on my website. If you think we could work on something cool together give
-                me a shout on social medias or via a direct email
+              <h5 className="white-text">{messageTitle}</h5>
+              <p className="grey-text text-lighten-4">
+                {messageText}
                 <span className="ec ec-wink"></span>
               </p>
             </div>
             <div className="col l4 m4 offset-l2 s12 connect">
-              <h5 className="white-text">Connect</h5>
+              <h5 className="white-text">{connectTitle}</h5>
               <ul>
                 <li>
-                  <a className="waves-effect waves-light btn" href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fmaterializecss.com%2Ffooter.html&ref_src=twsrc%5Etfw&region=follow_link&screen_name=maxdyy&tw_p=followbutton"
-                    target="_blank">
-                    <i className="fab fa-twitter"></i> @maxdyy
+                  <a className="waves-effect waves-light btn" href={twitter.link} target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-twitter"></i> {twitter.user}
                   </a>
                 </li>
                 <li>
-                  <a className="waves-effect waves-light btn" href="https://codepen.io/maxdyy" target="_blank">
-                    <i className="fab fa-codepen"></i> maxdyy
+                  <a className="waves-effect waves-light btn" href={codepen.link} target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-codepen"></i> {codepen.user}
                   </a>
                 </li>
                 <li>
-                  <a className="waves-effect waves-light btn" href="https://github.com/maxdyy" target="_blank">
-                    <i className="fab fa-github"></i> maxdyy
+                  <a className="waves-effect waves-light btn" href={github.link} target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-github"></i> {github.user}
                   </a>
                 </li>
                 <li>
-                  <a className="waves-effect waves-light btn" href="https://www.linkedin.com/in/maxdyy" target="_blank">
-                    <i className="fab fa-linkedin-in"></i> Maksym Dmukhovskyy
+                  <a className="waves-effect waves-light btn" href={linkedIn.link} target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-linkedin-in"></i> {linkedIn.user}
                   </a>
                 </li>
                 <li>
-                  <a className="waves-effect waves-light btn" href="mailto:dm.maksym@gmail.com?subject=MYY:%20&body=Hi%20Maksym,">
-                    <i className="fab fa-telegram-plane"></i> dm.maksym@gmail.com
+                  <a className="waves-effect waves-light btn" href={mail.link}>
+                    <i className="fab fa-telegram-plane"></i> {mail.user}
                   </a>
                 </li>
               </ul>
@@ -48,8 +63,8 @@ class Footer extends Component {
         </div>
         <div className="footer-copyright">
           <div className="container">
-            © 2017-2018 Maksym Dmukhovskyy
-            <a className="grey-text text-lighten-4 right" href="https://github.com/maxdyy/dmukhovskyyPortfolio" target="_blank">MIT License</a>
+            {copyright}
+            <a className="grey-text text-lighten-4 right" href={gitRepo} target="_blank" rel="noopener noreferrer">{license}</a>
           </div>
         </div>
       </footer>

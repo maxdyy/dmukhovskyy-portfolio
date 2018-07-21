@@ -7,7 +7,8 @@
     "jsBuild": "webpack -p --config webpack.config.js",
     "jsDev": "webpack -w --config webpack.config.js",
     "cssBuild": "gulp build",
-    "cssDev": "gulp watch"
+    "cssDev": "gulp watch",
+    "build": "npm run jsBuild && npm run cssBuild"
   },
   "repository": {
     "type": "git",
