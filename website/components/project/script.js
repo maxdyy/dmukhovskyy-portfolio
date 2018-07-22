@@ -5,6 +5,8 @@ $(document).ready(function () {
   getData(Graph_API, query);
 })
 
+debugger
+
 var Graph_API = 'https://api.graphcms.com/simple/v1/dmukhovskyy';
 var query = '{\
                allProjects \
