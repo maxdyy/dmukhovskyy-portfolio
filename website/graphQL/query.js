@@ -1,4 +1,4 @@
-export const projects_query = 
+const PROJECT_QUERY = 
 `
   {
     projects(orderBy:createdAt_DESC)  {
@@ -17,3 +17,5 @@ export const projects_query =
     }
   }
 `
+
+export default PROJECT_QUERY

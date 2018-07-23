@@ -9,6 +9,11 @@
       "contacts": "Contacts",
       "projects": "Projects"
     },
+    "projects": {
+      "frontEndText": "Front-end:",
+      "backEndText": "Back-end:",
+      "visitBtnText": "Visit"
+    },
     "footer": {
       "messageTitle": "Thanks for passing by",
       "messageText": "I truly appreciate the time you spent on my website. If you think we could work on something cool together give me a shout on social medias or via a direct email ",
