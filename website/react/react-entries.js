@@ -5,5 +5,6 @@ const reactPages = './website/react/pages'
 
 module.exports = {
   projects: `${reactPages}/projects`,
+  contacts: `${reactPages}/contacts`,
   vendor: ['react', 'react-dom'],
 }
