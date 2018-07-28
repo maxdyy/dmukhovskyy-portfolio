@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import ContactForm from '../components/contactform'
 
 class ContactsPaje extends Component {
   constructor(props) {
@@ -22,7 +23,9 @@ class ContactsPaje extends Component {
     return (
       <div className="contacts">
         <Header navigation={projectsNavigation} />
-        Hello React
+        <section className="contact-form">
+          <ContactForm />
+        </section>
         <Footer />
       </div>
     )
