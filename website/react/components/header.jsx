@@ -42,15 +42,15 @@ class Header extends Component {
                 <li><a className="modal-trigger" href={_about}>{about}</a></li>
                 <li><a href={_smart}>{smart}</a></li>
                 <li><a href={_techStack}>{techStack}</a></li>
-                <li><a href={_contacts}>{contacts}</a></li>
                 <li><a href={_projects}>{projects}</a></li>
+                <li><a href={_contacts}>{contacts}</a></li>
               </ul>
               <ul className="side-nav" id="mobile-demo">
                 <li><a className="modal-trigger close-click" href={_about}>{about}</a></li>
                 <li><a className="close-click" href={_smart}>{smart}</a></li>
                 <li><a className="close-click" href={_techStack}>{techStack}</a></li>
-                <li><a className="close-click" href={_contacts}>{contacts}</a></li>
                 <li><a className="close-click" href={_projects}>{projects}</a></li>
+                <li><a className="close-click" href={_contacts}>{contacts}</a></li>
               </ul>
             </div>
           </nav>
