@@ -16,8 +16,8 @@ class ProjectsPage extends Component {
         _about: "./index#modal",
         _smart: "./index#smart",
         _techStack: "./index#tech",
-        _contacts: "./contacts",
-        _projects: "#"
+        _projects: "#",
+        _contacts: "./contacts"
       },
       publishedProjects: [],
       projectsAreReady: false

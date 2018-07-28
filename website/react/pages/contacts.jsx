@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import ContactForm from '../components/contactform'
+import ContactForm from '../components/contactForm'
 
 class ContactsPaje extends Component {
   constructor(props) {
@@ -12,8 +12,8 @@ class ContactsPaje extends Component {
         _about: "./index#modal",
         _smart: "./index#smart",
         _techStack: "./index#tech",
-        _contacts: "#",
-        _projects: "./projects"
+        _projects: "./projects",
+        _contacts: "#"
       }
     }
   }
@@ -24,7 +24,9 @@ class ContactsPaje extends Component {
       <div className="contacts">
         <Header navigation={projectsNavigation} />
         <section className="contact-form">
-          <ContactForm />
+          <div className="container">
+            <ContactForm />
+          </div>
         </section>
         <Footer />
       </div>

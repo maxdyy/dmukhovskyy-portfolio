@@ -32,7 +32,10 @@ gulp.task('build', function () {
 
 gulp.task('watch', function () {
   notify(`SUCCESS - SASS WATCH STARTED @ ${timestamp('HH:mm:ss')}`).write('');
-  return watch(['./website/components/*/*.s*ss'], {
+  return watch([
+    './website/components/*/*.s*ss',
+    './website/react/components/style/*.s*ss'
+  ], {
     ignoreInitial: false
   }, function () {
     gulp.src('./website/style.s*ss')
