@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Button from './button'
 
 class ContactForm extends Component {
   render() {
@@ -19,6 +20,11 @@ class ContactForm extends Component {
             <div className="input-field col s12">
               <textarea id="form_message" className="materialize-textarea"></textarea>
               <label htmlFor="form_message">Message</label>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col s12">
+              <Button text="submit" type="submit"></Button>
             </div>
           </div>
         </form>
