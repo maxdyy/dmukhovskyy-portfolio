@@ -23,12 +23,21 @@
 
 <body>
   <div id="react-contactsPage"></div>
+
   <script src="assets/jquery/jquery-3.2.1.min.js"></script>
   <script src="assets/materialize/js/materialize.min.js"></script>
   <script src="react/dist/vendor.bundle.js"></script>
   <script src="react/dist/contacts.bundle.js"></script>
   <script src="components/init/script.js"></script>
   <script src="components/menu/script.js"></script>
+
+  <!-- A little help for the Netlify post-processing bots -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input name='tel' type="tel" />
+    <textarea name="message"></textarea>
+  </form>
 </body>
 
 </html>
