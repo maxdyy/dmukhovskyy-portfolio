@@ -12,6 +12,7 @@ class ContactForm extends Component {
           netlify="true"
           className="col s12"
         >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="row">
             <div className="input-field col s6">
               <input name="name" id="form_name" type="text" className="validate" />
