@@ -5,7 +5,13 @@ class ContactForm extends Component {
   render() {
     return (
       <div className="row">
-        <form className="col s12">
+        <form 
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify="true"
+          className="col s12"
+        >
           <div className="row">
             <div className="input-field col s6">
               <input id="form_name" type="text" className="validate" />
@@ -18,7 +24,7 @@ class ContactForm extends Component {
           </div>
           <div className="row">
             <div className="input-field col s12">
-              <textarea id="form_message" className="materialize-textarea"></textarea>
+              <textarea id="form_message" className="materialize-textarea validate"></textarea>
               <label htmlFor="form_message">Message</label>
             </div>
           </div>
