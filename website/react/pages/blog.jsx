@@ -23,7 +23,9 @@ class BlogPage extends Component {
     return (
       <div className="blog">
         <Header navigation={projectsNavigation} />
-          <div> HELLO BLOG REACT</div>
+          <div>
+            
+          </div>
         <Footer />
       </div>
     )

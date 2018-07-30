@@ -1,4 +1,4 @@
-const PROJECT_QUERY = 
+export const PROJECT_QUERY = 
 `
   {
     projects(orderBy:createdAt_DESC)  {
@@ -18,4 +18,19 @@ const PROJECT_QUERY =
   }
 `
 
-export default PROJECT_QUERY
+export const BLOG_QUERY = 
+`
+  {
+    blogPosts(orderBy:createdAt_DESC) {
+      status
+      id
+      postTitle
+      postThumbnail {
+        handle
+      }
+      postDescription
+      postText
+      postPath
+    }
+  }
+`

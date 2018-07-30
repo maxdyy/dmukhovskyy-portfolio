@@ -4,6 +4,7 @@ const reactComponents = './website/react/components'
 const reactPages = './website/react/pages'
 
 module.exports = {
+  index: `${reactPages}/index`,
   projects: `${reactPages}/projects`,
   blog: `${reactPages}/blog`,
   contact: `${reactPages}/contact`,

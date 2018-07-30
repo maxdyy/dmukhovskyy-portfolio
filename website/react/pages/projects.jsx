@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom'
 import axios from "axios"
 import { setStorage, getStorage } from '../../utils/sessionStorage'
 import MASTER_ENDPOINT from '../../graphQL/endpoint'
-import PROJECT_QUERY from '../../graphQL/query'
+import { PROJECT_QUERY } from '../../graphQL/query'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import ProjectItem from '../components/projectItem'
+
 
 class ProjectsPage extends Component {
   constructor(props) {
