@@ -15,9 +15,9 @@ class ProjectsPage extends Component {
       projectsNavigation: {
         _about: "./index#modal",
         _smart: "./index#smart",
-        _techStack: "./index#tech",
         _projects: "#",
-        _contacts: "./contacts"
+        _blog: "./blog",
+        _contact: "./contact"
       },
       publishedProjects: [],
       projectsAreReady: false
@@ -46,7 +46,6 @@ class ProjectsPage extends Component {
      } else {
       const projectsAreReady = true
       this.setState({ publishedProjects: sessionSavedProjects, projectsAreReady })
-      console.log("coming from session storage :)")
     }
   }
 
