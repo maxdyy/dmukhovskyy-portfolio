@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Maksym Dmukhovskyy - Projects</title>
+  <title>Maksym Dmukhovskyy - Contacts</title>
   <meta charset="UTF-8">
   <script type="text/javascript" src="assets/yMetrica/script.js"></script>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,13 +22,22 @@
 </head>
 
 <body>
-  <div id="react-projectsPage"></div>
+  <!-- A little help for the Netlify post-processing bots -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+  </form>
+
+  <div id="react-contactsPage"></div>
+
   <script src="assets/jquery/jquery-3.2.1.min.js"></script>
   <script src="assets/materialize/js/materialize.min.js"></script>
   <script src="react/dist/vendor.bundle.js"></script>
-  <script src="react/dist/projects.bundle.js"></script>
+  <script src="react/dist/contact.bundle.js"></script>
   <script src="components/init/script.js"></script>
   <script src="components/menu/script.js"></script>
+
 </body>
 
 </html>

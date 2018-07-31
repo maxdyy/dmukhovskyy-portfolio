@@ -5,9 +5,14 @@
       "surname": "Dmukhovskyy",
       "about": "About",
       "smart": "S.M.A.R.T.",
-      "techStack": "Tech Stack",
-      "contacts": "Contacts",
-      "projects": "Projects"
+      "projects": "Projects",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "projects": {
+      "frontEndText": "Front-end:",
+      "backEndText": "Back-end:",
+      "visitBtnText": "Visit"
     },
     "footer": {
       "messageTitle": "Thanks for passing by",
