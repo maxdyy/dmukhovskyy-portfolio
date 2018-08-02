@@ -1,41 +1,25 @@
 {
-  "name": "dmukhovskyyportfolio",
-  "version": "1.0.0",
-  "description": "source code of dmukhovskyy.com",
-  "main": "index.js",
-  "scripts": {
-    "jsBuild": "webpack -p --config webpack.config.js",
-    "jsDev": "webpack -w --config webpack.config.js",
-    "cssBuild": "gulp build",
-    "cssDev": "gulp watch",
-    "build": "npm run jsBuild && npm run cssBuild"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maxdyy/dmukhovskyyPortfolio.git"
-  },
-  "author": "Maksym Dmukhovskyy",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/maxdyy/dmukhovskyyPortfolio/issues"
-  },
-  "homepage": "https://github.com/maxdyy/dmukhovskyyPortfolio#readme",
-  "devDependencies": {
-    "axios": "^0.18.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "gulp": "^4.0.0",
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-notify": "^3.2.0",
-    "gulp-rename": "^1.3.0",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-watch": "^5.0.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "webpack": "^4.16.1",
-    "webpack-cli": "^3.1.0"
+    "gulp-watch": "^5.0.1",
+    "jquery": "^3.3.1",
+    "materialize-css": "^0.100.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

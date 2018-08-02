@@ -1,20 +1,19 @@
-const gulp = require('gulp'),
-  sass = require('gulp-sass'),
-  autoprefixer = require('gulp-autoprefixer'),
-  watch = require('gulp-watch'),
-  sourcemaps = require('gulp-sourcemaps'),
-  rename = require('gulp-rename'),
-  notify = require('gulp-notify');
-
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const watch = require('gulp-watch');
+const sourcemaps = require('gulp-sourcemaps');
+const rename = require('gulp-rename');
+const notify = require('gulp-notify');
 const timestamp = require('time-stamp');
 
 gulp.task('build', function () {
   return (
-    gulp.src('./website/style.s*ss')
+    gulp.src('./src/style/style.s*ss')
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(autoprefixer({
-      grid: true,
-      browsers: ['> 1%', 'iOS 7']
+      browsers: ['iOS 7', '> 1%'],
+      grid: true
     }))
     .pipe(rename({
       extname: ".min.css"
@@ -22,7 +21,7 @@ gulp.task('build', function () {
     .pipe(sass({
       outputStyle: 'compressed'
     }))
-    .pipe(gulp.dest('./website/'))
+    .pipe(gulp.dest('./src'))
     .pipe(notify({
       message: `SUCCESS - SASS => CSS min compiled @ ${timestamp('HH:mm:ss')}`,
       onLast: true
@@ -32,18 +31,15 @@ gulp.task('build', function () {
 
 gulp.task('watch', function () {
   notify(`SUCCESS - SASS WATCH STARTED @ ${timestamp('HH:mm:ss')}`).write('');
-  return watch([
-    './website/components/*/*.s*ss',
-    './website/react/components/style/*.s*ss'
-  ], {
+  return watch('./src/style/components/*.s*ss', {
     ignoreInitial: false
   }, function () {
-    gulp.src('./website/style.s*ss')
+    gulp.src('./src/style/style.s*ss')
       .pipe(sourcemaps.init())
       .pipe(sass.sync().on('error', sass.logError))
       .pipe(autoprefixer({
-        grid: true,
-        browsers: ['> 1%', 'iOS 7']
+        browsers: ['iOS 7', '> 1%'],
+        grid: true
       }))
       .pipe(rename({
         extname: ".min.css"
@@ -52,7 +48,7 @@ gulp.task('watch', function () {
         outputStyle: 'compressed'
       }))
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('./website/'))
+      .pipe(gulp.dest('./src'))
   }).on('change', function (e) {
     const file = e.split("/").pop();
     notify(`UPDATED - ${file} @ ${timestamp('HH:mm:ss')}`).write('');
