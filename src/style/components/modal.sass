@@ -1,0 +1,160 @@
+.modal
+  overflow-x: hidden
+
+  .modal-content
+    .modal-profile
+      padding: 5% 10% 0 10%
+
+      +defaultMobileLarge
+        padding: 5% 5% 0 5%
+
+
+      +defaultMobile
+        padding: 5% 0 0 0
+
+
+      .modal-avatar
+        display: flex
+        justify-content: space-between
+
+        +defaultMobileSmall
+          flex-direction: column
+          justify-content: center
+          align-items: center
+
+
+        .avatar-img-wrapper
+          width: 200px
+          height: 200px
+          padding: 5px
+          border-radius: 2px
+          background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+
+          img
+            width: 200px
+            height: 200px
+            border-radius: 2px
+
+        .modal-name-contacts
+          width: 45%
+          display: flex
+          flex-direction: column
+
+          +defaultMobileLarge
+            width: 40%
+
+
+          +defaultMobileSmall
+            width: 100%
+            margin-top: 35px
+
+
+          .modal-name
+            width: 100%
+            display: flex
+            flex-grow: 0
+            font-size: 18px
+            text-transform: uppercase
+            letter-spacing: 1px
+            font-weight: 600
+            margin-bottom: 10px
+
+            +defaultMobileSmall
+              span
+                width: 100%
+                text-align: center
+                margin-bottom: 20px
+
+          .modal-contacts
+            display: flex
+            flex-grow: 1
+            flex-direction: column
+            justify-content: space-evenly
+
+            div .contact-title
+              display: flex
+              flex-grow: 1
+              font-weight: 700
+
+            div .contact-value
+              display: flex
+              flex-grow: 1
+
+              .fab,
+              .fas
+                cursor: pointer
+                position: relative
+                font-size: 21px
+                margin-left: 9px
+                margin-top: 3px
+                color: $DarkShades
+                transition: 0.45s
+                transition-timing-function: ease
+
+              .fab.first,
+              .fas.fa-file-alt
+                margin-left: 0
+
+              .fab.fa-github
+                color: #6e5494
+
+              .fab.fa-codepen
+                color: #7a7a7a
+
+              .fab.fa-twitter-square
+                color: #039be5
+
+              .fab.fa-linkedin
+                color: #0277b5
+
+      .modal-about
+        margin-top: 20px
+
+        h2
+          font-size: 18px
+          text-transform: uppercase
+          letter-spacing: 1px
+          font-weight: 600
+
+        em
+          cursor: pointer
+
+  .modal-footer
+    .btn,
+    .btn:focus,
+    .btn:hover
+      background-color: $DarkShades
+      color: $LightShades
+      margin-right: 3px
+
+  hr
+    margin: 70px auto 30px auto
+    width: 80%
+    border: 0
+    height: 1px
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+
+// tooltip styling
+.material-tooltip
+  padding: 8px 10px
+
+  span
+    font-size: 13px
+    font-weight: 300
+
+  .backdrop
+    background-color: $DarkShades
+
+// custom scrollbar
+.modal::-webkit-scrollbar-track
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+
+.modal::-webkit-scrollbar
+  width: 12px
+  background-color: #F5F5F5
+
+.modal::-webkit-scrollbar-thumb
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+  background-color: $DarkShades
+  opacity: 0.5
