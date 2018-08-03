@@ -1,0 +1,94 @@
+$Text_Font: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif
+$Text_Mono: "Fira Mono", monospace
+
+$LightShades: #FAFAFA
+$LightAccent: #ACAEAB
+$DarkAccent: #8B91A3
+$DarkShades: #303843
+
+=defaultHD
+  @media all and (max-width: 1280px), all and (max-height: 720px)
+    @content
+
+=defaultTabletLarge
+  @media all and (max-width: 1100px), all and (max-height: 576px)
+    @content
+
+=defaultTablet
+  @media all and (max-width: 960px), all and (max-height: 540px)
+    @content
+
+=defaultTabletSmall
+  @media all and (max-width: 896px), all and (max-height: 504px)
+    @content
+
+=defaultMobileLarge
+  @media all and (max-width: 768px), all and (max-height: 432px)
+    @content
+
+=defaultMobile
+  @media all and (max-width: 640px), all and (max-height: 360px)
+    @content
+
+=defaultMobileSmall
+  @media all and (max-width: 560px), all and (max-height: 320px)
+    @content
+
+=defaultMobileMini
+  @media all and (max-width: 512px), all and (max-height: 288px)
+    @content
+
+=defaultMobileXS
+  @media all and (max-width: 400px), all and (max-height: 250px)
+    @content
+
+=defaultMobileXXS
+  @media all and (max-width: 350px)
+    @content
+
+html,
+body
+  width: 100%
+  height: 100%
+  margin: 0
+  background-color: $LightShades
+  -webkit-tap-highlight-color: transparent
+  font-family: $Text_Font
+  text-rendering: optimizeLegibility
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+
+body::-webkit-scrollbar
+  display: none
+
+a:link
+  color: #000
+  text-decoration: none
+
+a:visited
+  color: #000
+  text-decoration: none
+
+a:hover
+  color: #000
+  text-decoration: none
+
+a:active
+  color: #000
+  text-decoration: none
+
+h1, h2
+  margin: 0
+
+// Hiding projects for now
+.project-menu
+  display: none
+
+@import ./components/menu.sass
+@import ./components/masterHead.sass
+@import ./components/modal.sass
+@import ./components/smart.sass
+@import ./components/tech.sass
+@import ./components/footer.sass
+@import ./components/project.sass
+@import ./components/contactForm.sass
