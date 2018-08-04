@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Tech extends Component {
   render() {
     return (
-      <section id="tech" className="tech-stack scrollspy">
+      <section id="tech" className="tech-stack">
         <h2>Tech I use</h2>
         <hr />
         <div className="tech-intro">
