@@ -6,7 +6,7 @@ import { dmukhovskyy_en } from "../localization/content.json";
 const { header } = dmukhovskyy_en;
 const { name, surname, about, smart, blog, projects, contact } = header;
 
-class Header extends Component {
+class Menu extends Component {
   render() {
     const { navigation } = this.props;
     const { _about, _smart, _projects, _blog, _contact } = navigation;
@@ -94,4 +94,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default Menu;

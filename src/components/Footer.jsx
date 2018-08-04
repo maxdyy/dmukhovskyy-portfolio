@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { dmukhovskyy_en } from "../../localization/content.json";
+import { dmukhovskyy_en } from "../localization/content.json";
 
 const { footer } = dmukhovskyy_en;
 const {
