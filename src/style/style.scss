@@ -109,11 +109,7 @@ h2 {
   margin: 0;
 }
 
-// Hiding projects for now
-.project-menu {
-  display: none;
-}
-
+@import "./components/button.scss";
 @import "./components/menu.scss";
 @import "./components/masterHead.scss";
 @import "./components/modal.scss";
