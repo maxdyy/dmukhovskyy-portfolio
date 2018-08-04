@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import Header from './components/Header'
+import React, { Component } from "react";
+import Header from "./components/Header";
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       navigation: {
         _about: "./index#modal",
@@ -12,7 +12,7 @@ class App extends Component {
         _projects: "./projects",
         _contact: "./contact"
       }
-    }
+    };
   }
   render() {
     return (
@@ -23,4 +23,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default App;
