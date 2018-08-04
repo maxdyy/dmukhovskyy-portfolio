@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { dmukhovskyy_en } from "../../localization/content.json";
+import { dmukhovskyy_en } from "../localization/content.json";
 
 const { frontEndText, backEndText, visitBtnText } = dmukhovskyy_en.projects;
 
@@ -56,7 +56,7 @@ class ProjectItem extends Component {
               className="waves-effect waves-light btn project-btn"
               href={`${projectUrl}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               {visitBtnText}
             </a>

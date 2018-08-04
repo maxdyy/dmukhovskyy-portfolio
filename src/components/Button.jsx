@@ -4,7 +4,7 @@ class Button extends Component {
   render() {
     const { text, type } = this.props;
     return (
-      <button className="waves-effect waves-light btn" type={type}>
+      <button className="waves-effect waves-light btn dm-button" type={type}>
         {text}
       </button>
     );
