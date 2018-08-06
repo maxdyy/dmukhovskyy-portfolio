@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import $ from "jquery";
 import axios from "axios";
 import { setStorage, getStorage } from "../database/sessionStorage";
 import MASTER_ENDPOINT from "../database/endpoint";
@@ -12,7 +13,7 @@ export default class Projects extends Component {
     super(props);
     this.state = {
       navigation: {
-        _about: "/#modal",
+        _home: "/",
         _smart: "/#smart",
         _projects: "#",
         _blog: "/blog",
@@ -75,5 +76,8 @@ export default class Projects extends Component {
     } else {
       return null;
     }
+  }
+  componentDidUpdate() {
+    $(".collapsible").collapsible();
   }
 }

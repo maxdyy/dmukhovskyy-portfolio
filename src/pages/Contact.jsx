@@ -9,7 +9,7 @@ export default class Contact extends Component {
 
     this.state = {
       navigation: {
-        _about: "/#modal1",
+        _home: "/",
         _smart: "/#smart",
         _projects: "/projects",
         _blog: "/blog",

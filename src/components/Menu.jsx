@@ -4,12 +4,18 @@ import "materialize-css";
 import { dmukhovskyy_en } from "../localization/content.json";
 
 const { header } = dmukhovskyy_en;
-const { name, surname, about, smart, blog, projects, contact } = header;
+const { name, surname, home, about, smart, blog, projects, contact } = header;
 
 class Menu extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { home: this.props.navigation.about ? about : home };
+  }
+
   render() {
     const { navigation } = this.props;
-    const { _about, _smart, _projects, _blog, _contact } = navigation;
+    const { _home, _smart, _projects, _blog, _contact } = navigation;
     return (
       <header className="main-nav">
         <div className="main-nav-wrapper">
@@ -36,8 +42,8 @@ class Menu extends Component {
               </a>
               <ul className="right hide-on-med-and-down">
                 <li>
-                  <a className="modal-trigger" href={_about}>
-                    {about}
+                  <a className="modal-trigger" href={_home}>
+                    {this.state.home}
                   </a>
                 </li>
                 <li>
@@ -55,8 +61,8 @@ class Menu extends Component {
               </ul>
               <ul className="side-nav" id="mobile-demo">
                 <li>
-                  <a className="modal-trigger close-click" href={_about}>
-                    {about}
+                  <a className="modal-trigger close-click" href={_home}>
+                    {this.state.home}
                   </a>
                 </li>
                 <li>

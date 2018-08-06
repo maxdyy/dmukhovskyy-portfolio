@@ -32,7 +32,10 @@
   width: 100%;
 
   .project-item {
-    margin: 10px 24px !important;
+    margin: 25px 24px !important;
+    @include defaultMobileMini {
+      margin: 15px 0px !important;
+    }
 
     &.active {
       margin: 10px 0 !important;
@@ -54,6 +57,10 @@
         background-repeat: no-repeat;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
           0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        @include defaultMobileMini {
+          height: 50px;
+          width: 50px;
+        }
       }
 
       .project-title {
@@ -62,6 +69,14 @@
         font-weight: 300;
         font-size: 22px;
         letter-spacing: 1px;
+        @include defaultMobileMini {
+          font-size: 18px;
+          letter-spacing: 0;
+        }
+        @include defaultMobileXS {
+          font-size: 16px;
+          margin-left: 15px;
+        }
       }
     }
 

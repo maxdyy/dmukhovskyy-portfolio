@@ -8,7 +8,7 @@ export default class Error404 extends Component {
 
     this.state = {
       navigation: {
-        _about: "/#modal",
+        _home: "/",
         _smart: "/#smart",
         _projects: "/projects",
         _blog: "/blog",

@@ -13,7 +13,8 @@ export default class Home extends Component {
 
     this.state = {
       navigation: {
-        _about: "#modal1",
+        about: true,
+        _home: "#modal1",
         _smart: "#smart",
         _projects: "/projects",
         _blog: "/blog",
