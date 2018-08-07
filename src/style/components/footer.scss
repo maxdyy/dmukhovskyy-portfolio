@@ -1,13 +1,83 @@
-.page-footer {
+.footer {
   margin-top: 100px;
   background-color: $DarkShades;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include defaultMobileSmall {
     margin-top: 50px;
   }
 
+  .footer-top,
   .footer-copyright {
+    display: flex;
+    width: 100%;
+    max-width: 68.5rem;
+    @include defaultMobile {
+      flex-direction: column;
+    }
+  }
+
+  .footer-top {
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    .thanks-section {
+      max-width: 500px;
+      @include defaultTablet {
+        max-width: 350px;
+      }
+      @include defaultMobile {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+    .connect-section {
+      &__header {
+        text-align: right;
+      }
+      @include defaultMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__header {
+          text-align: center;
+          margin-bottom: 0;
+        }
+        ul {
+          width: 100%;
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    width: 100%;
+    min-height: 50px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: $LightShades;
+  }
+
+  .footer-copyright {
+    justify-content: space-between;
+    padding: 0 2rem;
+    @include defaultMobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      a {
+        margin-top: 5px;
+      }
+    }
   }
 
   a.btn,
