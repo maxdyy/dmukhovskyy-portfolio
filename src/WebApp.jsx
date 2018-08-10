@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
@@ -15,16 +15,14 @@ class WebApp extends Component {
   render() {
     return (
       <div className="WebApp">
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/projects" component={Projects} />
-            <Route path="/blog" component={Blog} />
-            {}
-            <Route path="/contact" component={Contacts} />
-            <Route component={Error404} />
-          </Switch>
-        </BrowserRouter>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/projects" component={Projects} />
+          <Route path="/blog" component={Blog} />
+          {}
+          <Route path="/contact" component={Contacts} />
+          <Route component={Error404} />
+        </Switch>
       </div>
     );
   }

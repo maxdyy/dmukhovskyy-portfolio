@@ -122,6 +122,9 @@ var phrases = [
 var counter = 0;
 var initTextScrumble = function initTextScrumble() {
   var el = document.querySelector(".scramble-text");
+  if (!el) {
+    return;
+  }
   var fx = new TextScramble(el);
   fx.setText(phrases[counter]).then(function() {
     setTimeout(initTextScrumble, 4500);
