@@ -42,7 +42,7 @@ class Menu extends Component {
         <div className="main-nav-wrapper">
           <nav>
             <div className="nav-wrapper">
-              <a className="brand-logo" href="/">
+              <Link className="brand-logo" to="">
                 <div className="avatar">
                   <img src="avatar.png" alt="Maksym" />
                   <h1 className="name">
@@ -50,7 +50,7 @@ class Menu extends Component {
                     <span>{surname}</span>
                   </h1>
                 </div>
-              </a>
+              </Link>
               <a
                 href=""
                 onClick={e => {
