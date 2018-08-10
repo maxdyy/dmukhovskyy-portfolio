@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import $ from "jquery";
 import "materialize-css";
 import { dmukhovskyy_en } from "../localization/content.json";
@@ -9,19 +10,39 @@ const { name, surname, home, about, smart, blog, projects, contact } = header;
 class Menu extends Component {
   constructor(props) {
     super(props);
-
     this.state = { home: this.props.navigation.about ? about : home };
   }
 
   render() {
     const { navigation } = this.props;
-    const { _home, _smart, _projects, _blog, _contact } = navigation;
+    const { _home, _smart, _projects, _blog, _contact, about } = navigation;
+
+    const smartLink = about ? (
+      <a href={_smart}>{smart}</a>
+    ) : (
+      <Link to={_smart}>{smart}</Link>
+    );
+
+    const smartLinkMob = about ? (
+      <a className="close-click" href={_smart}>
+        {smart}
+      </a>
+    ) : (
+      <Link to={_smart} className="close-click">
+        {smart}
+      </Link>
+    );
+
+    const showModal = () => {
+      $(".modal").modal("open");
+    };
+
     return (
       <header className="main-nav">
         <div className="main-nav-wrapper">
           <nav>
             <div className="nav-wrapper">
-              <a className="brand-logo" href="/">
+              <Link className="brand-logo" to="">
                 <div className="avatar">
                   <img src="avatar.png" alt="Maksym" />
                   <h1 className="name">
@@ -29,7 +50,7 @@ class Menu extends Component {
                     <span>{surname}</span>
                   </h1>
                 </div>
-              </a>
+              </Link>
               <a
                 href=""
                 onClick={e => {
@@ -42,48 +63,42 @@ class Menu extends Component {
               </a>
               <ul className="right hide-on-med-and-down">
                 <li>
-                  <a className="modal-trigger" href={_home}>
+                  <Link onClick={showModal} to={_home}>
                     {this.state.home}
-                  </a>
+                  </Link>
+                </li>
+                <li>{smartLink}</li>
+                <li>
+                  <Link to={_projects}>{projects}</Link>
                 </li>
                 <li>
-                  <a href={_smart}>{smart}</a>
+                  <Link to={_blog}>{blog}</Link>
                 </li>
                 <li>
-                  <a href={_projects}>{projects}</a>
-                </li>
-                <li>
-                  <a href={_blog}>{blog}</a>
-                </li>
-                <li>
-                  <a href={_contact}>{contact}</a>
+                  <Link to={_contact}>{contact}</Link>
                 </li>
               </ul>
               <ul className="side-nav" id="mobile-demo">
                 <li>
-                  <a className="modal-trigger close-click" href={_home}>
+                  <Link className="close-click" onClick={showModal} to={_home}>
                     {this.state.home}
-                  </a>
+                  </Link>
                 </li>
+                <li> {smartLinkMob}</li>
                 <li>
-                  <a className="close-click" href={_smart}>
-                    {smart}
-                  </a>
-                </li>
-                <li>
-                  <a className="close-click" href={_blog}>
-                    {blog}
-                  </a>
-                </li>
-                <li>
-                  <a className="close-click" href={_projects}>
+                  <Link className="close-click" to={_projects}>
                     {projects}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="close-click" href={_contact}>
+                  <Link to={_blog} className="close-click">
+                    {blog}
+                  </Link>
+                </li>
+                <li>
+                  <Link className="close-click" to={_contact}>
                     {contact}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
