@@ -140,13 +140,15 @@
     }
   }
 
-  .modal-footer {
+  .modal-close {
+    display: flex;
+    justify-content: center;
     .btn,
     .btn:focus,
     .btn:hover {
       background-color: $DarkShades;
       color: $LightShades;
-      margin-right: 3px;
+      margin: 50px 3px 20px 0;
     }
   }
 
@@ -156,20 +158,6 @@
     border: 0;
     height: 1px;
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  }
-}
-
-// tooltip styling
-.material-tooltip {
-  padding: 8px 10px;
-
-  span {
-    font-size: 13px;
-    font-weight: 300;
-  }
-
-  .backdrop {
-    background-color: $DarkShades;
   }
 }
 

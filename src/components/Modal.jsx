@@ -28,11 +28,11 @@ export default class Modal extends Component {
                     <span className="contact-title">CURRENT LOCATION</span>
                     <span className="contact-value">
                       <a
-                        href="https://www.google.it/maps/place/Brescia,+Province+of+Brescia/@45.5866877,10.2062162,11.25z/data=!4m5!3m4!1s0x4781766ea2b0294d:0x22cd4615476aea04!8m2!3d45.5415526!4d10.2118019?hl=en"
+                        href="https://www.google.it/maps/place/Milan,+Metropolitan+City+of+Milan/@45.4628328,9.1076927,12z/data=!3m1!4b1!4m5!3m4!1s0x4786c1493f1275e7:0x3cffcd13c6740e8d!8m2!3d45.4642035!4d9.189982?hl=en"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Brescia, ITALY
+                        Milan, ITALY
                       </a>
                     </span>
                   </div>
@@ -106,19 +106,20 @@ export default class Modal extends Component {
               <hr />
               <h2>Main Skills</h2>
               <p>
-                JavaScript ES6 | React | Webpack | Gulp.js | jQuery | HTML5 |
-                CSS3 | Responsive Design
+                JavaScript ES6 | ReactJS | jQuery | Webpack | Gulp.js | HTML5 |
+                SASS | CSS3 | Responsive Design
               </p>
             </div>
+            <div className="modal-close">
+              {" "}
+              <a
+                href="#!"
+                className="modal-action modal-close waves-effect waves-light btn"
+              >
+                Close
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="modal-footer">
-          <a
-            href="#!"
-            className="modal-action modal-close waves-effect waves-light btn"
-          >
-            Close
-          </a>
         </div>
       </div>
     );
