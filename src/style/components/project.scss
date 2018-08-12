@@ -1,7 +1,7 @@
 .section-projects {
   position: relative;
   width: 100%;
-  min-height: 510px;
+  min-height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,11 +18,6 @@
 
   @include defaultMobileSmall {
     margin-bottom: -50px;
-  }
-
-  #particles-js {
-    height: 100%;
-    width: 100%;
   }
 }
 

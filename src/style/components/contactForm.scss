@@ -18,6 +18,33 @@
     color: $DarkShades;
   }
 
+  .form-container {
+    width: 100%;
+    margin: 2rem;
+    max-width: 65em;
+  }
+
+  .form-name,
+  .form-email {
+    display: inline-block;
+    width: calc(50% - 20px);
+    @include defaultMobile {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .form-name {
+    margin-right: 40px;
+    @include defaultMobile {
+      margin: 0;
+    }
+  }
+
+  .form-message {
+    margin: 35px 0;
+  }
+
   input:not([type]),
   input[type="text"]:not(.browser-default),
   input[type="password"]:not(.browser-default),
