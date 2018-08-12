@@ -21,7 +21,9 @@ export default class Blog extends Component {
     return (
       <div>
         <Menu navigation={this.state.navigation} />
-        <span>Blog</span>
+        <div className="section-blog">
+          <span>Blog</span>
+        </div>
         <Footer />
       </div>
     );

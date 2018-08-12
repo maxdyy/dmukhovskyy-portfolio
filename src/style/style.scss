@@ -109,17 +109,6 @@ h2 {
   margin: 0;
 }
 
-// transition css
-.fade-enter {
-  opacity: 0;
-  z-index: 1;
-}
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 250ms ease-in;
-}
-
 @import "./components/button.scss";
 @import "./components/menu.scss";
 @import "./components/masterHead.scss";
@@ -128,4 +117,5 @@ h2 {
 @import "./components/tech.scss";
 @import "./components/footer.scss";
 @import "./components/project.scss";
+@import "./components/blog.scss";
 @import "./components/contactForm.scss";
