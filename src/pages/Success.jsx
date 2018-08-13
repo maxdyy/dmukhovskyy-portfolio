@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import Menu from "../components/Menu";
-import Random404 from "../components/Random404";
+import FormSuccess from "../components/FormSuccess";
 import Footer from "../components/Footer";
 
-export default class Error404 extends Component {
+export default class Success extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       navigation: {
+        about: false,
         _home: "/",
         _smart: "/#smart",
         _projects: "/projects",
@@ -20,9 +21,9 @@ export default class Error404 extends Component {
 
   render() {
     return (
-      <div>
+      <div className="succes">
         <Menu navigation={this.state.navigation} />
-        <Random404 />
+        <FormSuccess />
         <Footer />
       </div>
     );

@@ -7,6 +7,7 @@ import { PROJECT_QUERY } from "../database/query";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
 import ProjectItem from "../components/ProjectItem";
+import Loader from "../components/Loader";
 
 export default class Projects extends Component {
   constructor(props) {
@@ -54,28 +55,23 @@ export default class Projects extends Component {
 
   render() {
     const { navigation, publishedProjects, projectsAreReady } = this.state;
-    if (projectsAreReady) {
-      const projectItems = publishedProjects.map(projectData => (
-        <ProjectItem key={projectData.id} projectData={projectData} />
-      ));
-
-      return (
-        <div className="projects">
-          <Menu navigation={navigation} />
-          <section className="section-projects">
-            <ul
-              className="collapsible popout projects-container"
-              data-collapsible="expandable"
-            >
-              {projectItems}
-            </ul>
-          </section>
-          <Footer />
-        </div>
-      );
-    } else {
-      return null;
-    }
+    const projectItems = publishedProjects.map(projectData => (
+      <ProjectItem key={projectData.id} projectData={projectData} />
+    ));
+    return (
+      <div className="projects">
+        <Menu navigation={navigation} />
+        <section className="section-projects">
+          <ul
+            className="collapsible popout projects-container"
+            data-collapsible="expandable"
+          >
+            {projectsAreReady ? projectItems : <Loader />}
+          </ul>
+        </section>
+        <Footer />
+      </div>
+    );
   }
   componentDidUpdate() {
     $(".collapsible").collapsible();
