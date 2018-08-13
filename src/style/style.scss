@@ -7,6 +7,16 @@ $LightAccent: #acaeab;
 $DarkAccent: #8b91a3;
 $DarkShades: #303843;
 
+$PurpleSwag: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$GreySwag: linear-gradient(to bottom, #d5dee7 0%, #e8ebf2 50%, #e2e7ed 100%),
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.02) 50%,
+    rgba(255, 255, 255, 0.02) 61%,
+    rgba(0, 0, 0, 0.02) 73%
+  ),
+  linear-gradient(33deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+
 @mixin defaultHD {
   @media all and (max-width: 1280px), all and (max-height: 720px) {
     @content;
@@ -119,3 +129,6 @@ h2 {
 @import "./components/project.scss";
 @import "./components/blog.scss";
 @import "./components/contactForm.scss";
+@import "./components/loader.scss";
+@import "./components/success.scss";
+@import "./components/random404.scss";

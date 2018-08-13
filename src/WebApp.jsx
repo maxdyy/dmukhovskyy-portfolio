@@ -6,6 +6,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contacts from "./pages/Contact";
 import Error404 from "./pages/Error404";
+import Success from "./pages/Success";
 
 class WebApp extends Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class WebApp extends Component {
           <Route path="/blog" component={Blog} />
           {}
           <Route path="/contact" component={Contacts} />
+          <Route path="/success" component={Success} />
           <Route component={Error404} />
         </Switch>
       </div>

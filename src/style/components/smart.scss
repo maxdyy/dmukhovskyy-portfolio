@@ -210,7 +210,7 @@
           height: 275px;
           width: 275px;
           margin: 0 7px;
-          background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background-image: $PurpleSwag;
 
           @include mobile-smart {
             height: 230px;

@@ -42,6 +42,27 @@
       "copyright": "© 2017-2018 Maksym Dmukhovskyy",
       "gitRepo": "https://github.com/maxdyy/dmukhovskyyPortfolio",
       "license": "MIT License"
+    },
+    "formSuccess": {
+      "message": "Thanks for contacting me, I'll get back to you ASAP ",
+      "button": "Back Home"
+    },
+    "random404": {
+      "message": "You found a",
+      "items": {
+        "Banana": "ec-banana",
+        "Puppy": "ec-dog",
+        "Monkey": "ec-monkey",
+        "Chick": "ec-hatched-chick",
+        "Unicorn": "ec-unicorn",
+        "Turtle": "ec-turtle",
+        "Doplhin": "ec-dolphin",
+        "Carrot": "ec-carrot",
+        "Pizza": "ec-pizza",
+        "Kitty": "ec-cat"
+      },
+      "message2": "Thats cute, but you need to go ",
+      "button": "Back Home"
     }
   }
 }
