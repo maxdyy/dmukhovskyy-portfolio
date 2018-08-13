@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 import { dmukhovskyy_en } from "../localization/content.json";
 
-const { message, items, message2, button } = dmukhovskyy_en.random404;
+const { message, items, button } = dmukhovskyy_en.random404;
 
 export default class Random404 extends Component {
   render() {

@@ -11,7 +11,7 @@ class ContactForm extends Component {
             method="POST"
             data-netlify="true"
             netlify="true"
-            action="/success"
+            action="/success/"
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="input-field form-name">
