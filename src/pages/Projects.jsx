@@ -16,7 +16,7 @@ export default class Projects extends Component {
       navigation: {
         _home: "/",
         _smart: "/#smart",
-        _projects: "#",
+        _projects: "/projects",
         _blog: "/blog",
         _contact: "/contact"
       },

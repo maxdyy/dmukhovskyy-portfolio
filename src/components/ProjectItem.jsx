@@ -18,9 +18,6 @@ class ProjectItem extends Component {
     } = this.props.projectData;
 
     const projectStyle = {
-      icon: {
-        backgroundImage: `url(${projectLogo.url})`
-      },
       gradient: {
         backgroundImage: `${headerBackground}`
       }

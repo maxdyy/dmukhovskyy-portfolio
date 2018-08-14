@@ -26,10 +26,13 @@ export const BLOG_QUERY = `
       postTitle
       postThumbnail {
         handle
+        width
+        height
       }
       postDescription
       postText
       postPath
+      readtime
     }
   }
 `;
