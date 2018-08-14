@@ -6,8 +6,9 @@ export const PROJECT_QUERY = `
       projectTitle
       headerBackground
       projectLogo {
-        id
-        url
+        handle
+        width
+        height
       }
       projectUrl
       projectFrontEnd
