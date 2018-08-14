@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { dmukhovskyy_en } from "../localization/content.json";
+import GraphImg from "graphcms-image";
 
 const { frontEndText, backEndText, visitBtnText } = dmukhovskyy_en.projects;
 
@@ -30,9 +31,10 @@ class ProjectItem extends Component {
           className={`collapsible-header header-${id}`}
           style={projectStyle.gradient}
         >
-          <div
-            className={`project-icon icon-${id}`}
-            style={projectStyle.icon}
+          <GraphImg
+            className="project-icon"
+            image={projectLogo}
+            maxWidth={150}
           />
           <span className="project-title">{projectTitle}</span>
         </div>
