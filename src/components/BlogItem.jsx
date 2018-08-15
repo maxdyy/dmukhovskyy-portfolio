@@ -25,7 +25,10 @@ export default class BlogItem extends Component {
                 {readtime} {read}
               </span>
             </div>
-            <Link to={`/${postTitle.split(" ").join("-")}`}>
+            <Link
+              className="blog-item__button"
+              to={`/${postTitle.split(" ").join("-")}`}
+            >
               <Button text={itemButton} type="button" />
             </Link>
           </div>
