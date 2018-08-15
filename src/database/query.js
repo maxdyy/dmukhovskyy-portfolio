@@ -23,15 +23,18 @@ export const BLOG_QUERY = `
     blogPosts(orderBy:createdAt_DESC) {
       status
       id
-      postTitle
       postThumbnail {
         handle
         width
         height
       }
-      postDescription
+      postImage {
+        handle
+        width
+        height
+      }
+      postTitle
       postText
-      postPath
       readtime
     }
   }
