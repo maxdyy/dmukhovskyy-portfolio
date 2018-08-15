@@ -43,8 +43,8 @@ export default class Tech extends Component {
           <div className="animation-wrapper-webpack">
             <div className="bubble s webpack" />
           </div>
-          <div className="animation-wrapper-javascript">
-            <div className="bubble m javascript" />
+          <div className="animation-wrapper-javascriptBBL">
+            <div className="bubble m javascriptBBL" />
           </div>
           <div className="animation-wrapper-python">
             <div className="bubble m python" />
