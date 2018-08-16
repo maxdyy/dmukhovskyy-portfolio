@@ -33,6 +33,7 @@ export const BLOG_QUERY = `
         width
         height
       }
+      postType
       postTitle
       postText
       readtime

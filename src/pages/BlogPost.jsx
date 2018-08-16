@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
 import GraphImg from "graphcms-image";
+import $ from "jquery";
 import hljs from "highlight.js";
 import Menu from "../components/Menu";
 import Footer from "../components/Footer";
@@ -19,7 +20,11 @@ export default class BlogPost extends Component {
     };
   }
   componentDidMount() {
-    hljs.initHighlightingOnLoad();
+    $(document).ready(function() {
+      $("pre code").each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
   }
   render() {
     const { navigation } = this.state;
