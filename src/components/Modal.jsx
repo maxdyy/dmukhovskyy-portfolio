@@ -75,7 +75,7 @@ export default class Modal extends Component {
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="./resume/resume.pdf"
+                        href="resume.pdf"
                       >
                         <i className="fas fa-file-alt" />
                       </a>
