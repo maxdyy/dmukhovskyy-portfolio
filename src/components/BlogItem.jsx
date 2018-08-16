@@ -8,7 +8,13 @@ const { itemButton, read } = dmukhovskyy_en.blog;
 
 export default class BlogItem extends Component {
   render() {
-    const { id, postThumbnail, postTitle, readtime } = this.props.blogData;
+    const {
+      id,
+      postThumbnail,
+      postTitle,
+      readtime,
+      postType
+    } = this.props.blogData;
 
     return (
       <div className={`blog-item item__${id}`}>
@@ -32,6 +38,7 @@ export default class BlogItem extends Component {
               <Button text={itemButton} type="button" />
             </Link>
           </div>
+          <div className={`blog-item__type ${postType}`} />
         </div>
       </div>
     );
