@@ -38,9 +38,17 @@ export default class Random404 extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
+    this.timer = setTimeout(() => {
       this.setState({ searching: false });
+      this.timer = 0;
     }, 2000);
+  }
+
+  componentWillUnmount() {
+    if (this.timer) {
+      clearTimeout(this.timer);
+      this.timer = 0;
+    }
   }
 
   render() {
