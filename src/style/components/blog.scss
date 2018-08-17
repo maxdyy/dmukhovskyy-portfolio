@@ -168,4 +168,14 @@
   blockquote {
     border-left: 5px solid #667eea;
   }
+  a {
+    color: #667eea;
+    &:link {
+      color: #667eea;
+    }
+    &:visited,
+    &:hover {
+      color: #764ba2;
+    }
+  }
 }
