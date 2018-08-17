@@ -28,7 +28,8 @@ export default class BlogPost extends Component {
   }
   render() {
     const { navigation } = this.state;
-    const { postTitle, postText, postImage } = this.props.blogData;
+    const { postTitle, postText, postImage, createdAt } = this.props.blogData;
+    const creationTime = createdAt.split("T")[0];
     return (
       <div>
         <Menu navigation={navigation} />
@@ -44,6 +45,10 @@ export default class BlogPost extends Component {
             <h1 className="blog-post__title">{postTitle}</h1>
             <div className="blog-post__text">
               <ReactMarkdown source={postText} />
+            </div>
+            <div className="blog-post__createdAt">
+              <span>Published: &nbsp;</span>
+              <span>{creationTime}</span>
             </div>
           </div>
         </section>

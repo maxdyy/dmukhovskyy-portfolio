@@ -8,6 +8,12 @@
   background: $GreySwag;
   background-blend-mode: normal, color-burn;
   margin-bottom: -100px;
+
+  .loader {
+    width: 100%;
+    max-width: 65rem;
+  }
+
   h1 {
     font-size: 7rem;
   }
