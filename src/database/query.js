@@ -23,6 +23,7 @@ export const BLOG_QUERY = `
     blogPosts(orderBy:createdAt_DESC) {
       status
       id
+      createdAt
       postThumbnail {
         handle
         width
