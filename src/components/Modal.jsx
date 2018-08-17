@@ -69,18 +69,6 @@ export default class Modal extends Component {
                       </a>
                     </span>
                   </div>
-                  <div>
-                    <span className="contact-title">RESUME</span>
-                    <span className="contact-value">
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="resume.pdf"
-                      >
-                        <i className="fas fa-file-alt" />
-                      </a>
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
