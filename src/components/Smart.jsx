@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import Particles from "react-particles-js";
+import particles from "../js/particles";
 
 export default class Smart extends Component {
   render() {
     return (
       <section id="smart" className="section-smart scrollspy">
         <div id="fade-gradient-in" />
-        <div id="particles-js" className="smart-inner-wrapper">
+        <div className="smart-inner-wrapper">
+          <Particles params={{ particles }} className="particles-js" />
           <div className="smart-inner-content">
             <h2>I believe in a S.M.A.R.T. approach</h2>
             <hr />
