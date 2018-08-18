@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router";
+import $ from "jquery";
 import Button from "./Button";
 
 const encode = data => {
@@ -20,18 +21,35 @@ class ContactForm extends Component {
     };
   }
 
-  handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
-    })
-      .then(() => {
-        this.setState({ redirect: true });
-      })
-      .catch(error => alert(error));
+  validateFeedback = (name, message, email) => {
+    if (!name) {
+      $("#form_name").addClass("invalid");
+    }
+    if (!message) {
+      $("#form_message").addClass("invalid");
+    }
+    if (!email) {
+      $("#form_email").addClass("invalid");
+    }
+  };
 
-    e.preventDefault();
+  handleSubmit = e => {
+    const { name, message, email } = this.state;
+    if (!name || !message || !email) {
+      this.validateFeedback(name, message, email);
+      e.preventDefault();
+    } else {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...this.state })
+      })
+        .then(() => {
+          this.setState({ redirect: true });
+        })
+        .catch(error => alert(error));
+      e.preventDefault();
+    }
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
