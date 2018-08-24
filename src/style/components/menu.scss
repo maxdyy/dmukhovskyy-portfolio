@@ -17,6 +17,11 @@
       }
 
       .nav-wrapper {
+        .button-collapse {
+          @include defaultMobileMini {
+            margin: 0;
+          }
+        }
         .brand-logo {
           height: 100%;
           color: $DarkShades;
