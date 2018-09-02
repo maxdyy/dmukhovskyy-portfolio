@@ -64,6 +64,9 @@
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
+        @include defaultMobile {
+          flex-direction: column;
+        }
       }
       &__header {
         position: relative;
@@ -71,21 +74,27 @@
         display: flex;
         align-items: center;
         cursor: default;
+        @include defaultMobile {
+          flex-direction: column;
+        }
       }
       &__icon {
         height: 70px;
         width: 70px;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
           0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        @include defaultMobileMini {
-          height: 50px;
-          width: 50px;
+        @include defaultMobile {
+          margin-bottom: 15px;
         }
       }
       &__description {
         margin-left: 20px;
         display: flex;
         flex-direction: column;
+        @include defaultMobile {
+          margin: 0;
+          text-align: center;
+        }
         &__title {
           font-weight: 400;
           font-size: 22px;
@@ -101,6 +110,9 @@
       }
       &__button {
         margin: 10px 0 10px 20px;
+        @include defaultMobile {
+          margin: 15px 0 0 0;
+        }
       }
     }
   }
