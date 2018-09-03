@@ -20,6 +20,14 @@ const findSavedPost = (id, sessionSavedBlogPosts) => {
   }
 };
 
+const makeCodeBeautiful = () => {
+  $(document).ready(() => {
+    $("pre code").each((i, block) => {
+      hljs.highlightBlock(block);
+    });
+  });
+};
+
 export default class BlogPost extends Component {
   constructor(props) {
     super(props);
@@ -45,6 +53,7 @@ export default class BlogPost extends Component {
     if (savedPost) {
       const blogPostsIsReady = true;
       this.setState({ blogPost: savedPost, blogPostsIsReady });
+      makeCodeBeautiful();
     } else if (
       (sessionSavedBlogPosts && !savedPost) ||
       !sessionSavedBlogPosts
@@ -59,17 +68,11 @@ export default class BlogPost extends Component {
       }).then(result => {
         const { blogPost } = result.data.data;
         self.setState({ blogPost, blogPostsAreReady: true });
+        makeCodeBeautiful();
       });
     } else {
       this.setState({ notFound: true });
     }
-
-    $(document).ready(() => {
-      console.log("making code look good");
-      $("pre code").each((i, block) => {
-        hljs.highlightBlock(block);
-      });
-    });
   }
   render() {
     const { navigation, blogPost, notFound } = this.state;
@@ -107,7 +110,11 @@ export default class BlogPost extends Component {
       return (
         <div>
           <Menu navigation={navigation} />
-          <Loader />
+          <div className="section-blog">
+            <div className="section-blog__container">
+              <Loader />
+            </div>
+          </div>
           <Footer />
         </div>
       );
