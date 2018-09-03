@@ -1,0 +1,134 @@
+$Text_Font: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+  Helvetica, Arial, sans-serif;
+$Text_Mono: "Fira Mono", monospace;
+
+$LightShades: #fafafa;
+$LightAccent: #acaeab;
+$DarkAccent: #8b91a3;
+$DarkShades: #303843;
+
+$PurpleSwag: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$GreySwag: linear-gradient(to bottom, #d5dee7 0%, #e8ebf2 50%, #e2e7ed 100%),
+  linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.02) 50%,
+    rgba(255, 255, 255, 0.02) 61%,
+    rgba(0, 0, 0, 0.02) 73%
+  ),
+  linear-gradient(33deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+
+@mixin defaultHD {
+  @media all and (max-width: 1280px), all and (max-height: 720px) {
+    @content;
+  }
+}
+
+@mixin defaultTabletLarge {
+  @media all and (max-width: 1100px), all and (max-height: 576px) {
+    @content;
+  }
+}
+
+@mixin defaultTablet {
+  @media all and (max-width: 960px), all and (max-height: 540px) {
+    @content;
+  }
+}
+
+@mixin defaultTabletSmall {
+  @media all and (max-width: 896px), all and (max-height: 504px) {
+    @content;
+  }
+}
+
+@mixin defaultMobileLarge {
+  @media all and (max-width: 768px), all and (max-height: 432px) {
+    @content;
+  }
+}
+
+@mixin defaultMobile {
+  @media all and (max-width: 640px), all and (max-height: 360px) {
+    @content;
+  }
+}
+
+@mixin defaultMobileSmall {
+  @media all and (max-width: 560px), all and (max-height: 320px) {
+    @content;
+  }
+}
+
+@mixin defaultMobileMini {
+  @media all and (max-width: 512px), all and (max-height: 288px) {
+    @content;
+  }
+}
+
+@mixin defaultMobileXS {
+  @media all and (max-width: 400px), all and (max-height: 250px) {
+    @content;
+  }
+}
+
+@mixin defaultMobileXXS {
+  @media all and (max-width: 350px) {
+    @content;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: $LightShades;
+  -webkit-tap-highlight-color: transparent;
+  font-family: $Text_Font;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+@import "./components/button.scss";
+@import "./components/menu.scss";
+@import "./components/masterHead.scss";
+@import "./components/modal.scss";
+@import "./components/smart.scss";
+@import "./components/tech.scss";
+@import "./components/footer.scss";
+@import "./components/project.scss";
+@import "./components/blog.scss";
+@import "./components/contactForm.scss";
+@import "./components/loader.scss";
+@import "./components/success.scss";
+@import "./components/random404.scss";
