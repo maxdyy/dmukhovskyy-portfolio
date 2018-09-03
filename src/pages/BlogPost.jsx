@@ -67,7 +67,12 @@ export default class BlogPost extends Component {
         }
       }).then(result => {
         const { blogPost } = result.data.data;
-        self.setState({ blogPost, blogPostsAreReady: true });
+        blogPost
+          ? self.setState({
+              blogPost,
+              blogPostsAreReady: true
+            })
+          : self.setState({ notFound: true });
         makeCodeBeautiful();
       });
     } else {

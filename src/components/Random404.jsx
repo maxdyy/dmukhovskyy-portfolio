@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
-import Loader from "./Loader";
 import { dmukhovskyy_en } from "../localization/content.json";
 
 const { message, items, button } = dmukhovskyy_en.random404;
@@ -29,32 +28,10 @@ const Create404 = () => {
 };
 
 export default class Random404 extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      searching: true
-    };
-  }
-
-  componentDidMount() {
-    this.timer = setTimeout(() => {
-      this.setState({ searching: false });
-      this.timer = 0;
-    }, 2000);
-  }
-
-  componentWillUnmount() {
-    if (this.timer) {
-      clearTimeout(this.timer);
-      this.timer = 0;
-    }
-  }
-
   render() {
     return (
       <section className="section-404">
-        {this.state.searching ? <Loader /> : <Create404 />}
+        <Create404 />
       </section>
     );
   }
