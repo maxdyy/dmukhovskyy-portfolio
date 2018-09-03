@@ -44,7 +44,7 @@ class Menu extends Component {
             <div className="nav-wrapper">
               <Link className="brand-logo" to="">
                 <div className="avatar">
-                  <img src="avatar.png" alt="Maksym" />
+                  <img src="/avatar.png" alt="Maksym" />
                   <h1 className="name">
                     <span>{name}</span>
                     <span>{surname}</span>

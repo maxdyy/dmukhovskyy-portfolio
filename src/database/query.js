@@ -41,3 +41,30 @@ export const BLOG_QUERY = `
     }
   }
 `;
+
+export const BLOG_POST_QUERY = id => {
+  return `
+    {
+      blogPost(where: {
+        id: "${id}"
+      }) {
+        status
+          id
+          createdAt
+          postThumbnail {
+            handle
+            width
+            height
+          }
+          postImage {
+            handle
+            width
+            height
+          }
+          postType
+          postTitle
+          postText
+          readtime
+      }
+    }`;
+};
