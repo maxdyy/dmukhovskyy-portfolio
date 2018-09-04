@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import Menu from "../components/Menu";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
@@ -21,6 +22,9 @@ export default class Contact extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Dmukhovskyy - Contact</title>
+        </Helmet>
         <Menu navigation={this.state.navigation} />
         <ContactForm />
         <Footer />
