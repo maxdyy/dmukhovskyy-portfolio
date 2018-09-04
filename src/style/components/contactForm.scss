@@ -148,3 +148,7 @@
     border-bottom: 1px solid #f44336;
   }
 }
+
+textarea.materialize-textarea.validate + label:not(.label-icon).active {
+  transform: translateY(-25px) scale(0.8);
+}

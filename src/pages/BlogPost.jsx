@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import ReactMarkdown from "react-markdown";
 import GraphImg from "graphcms-image";
 import $ from "jquery";
@@ -27,6 +28,9 @@ const makeCodeBeautiful = () => {
     });
   });
 };
+
+const createTwitterThumb = handle =>
+  `https://media.graphcms.com/resize=width:450/${handle}`;
 
 export default class BlogPost extends Component {
   constructor(props) {
@@ -83,9 +87,20 @@ export default class BlogPost extends Component {
     const { navigation, blogPost, notFound } = this.state;
     if (blogPost) {
       const { postTitle, postText, postImage, createdAt } = blogPost;
+      console.log(postImage);
       const creationTime = createdAt.split("T")[0];
       return (
         <div>
+          <Helmet>
+            <title>Dmukhovskyy - {postTitle}</title>
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content="@maxdyy" />
+            <meta name="twitter:title" content={postTitle} />
+            <meta
+              name="twitter:image"
+              content={createTwitterThumb(postImage.handle)}
+            />
+          </Helmet>
           <Menu navigation={navigation} />
           <section className="blog-post">
             <div className="blog-post__wrapper">

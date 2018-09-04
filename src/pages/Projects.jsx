@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import $ from "jquery";
 import axios from "axios";
 import { setStorage, getStorage } from "../database/sessionStorage";
@@ -60,6 +61,9 @@ export default class Projects extends Component {
     ));
     return (
       <div className="projects">
+        <Helmet>
+          <title>Dmukhovskyy - Projects</title>
+        </Helmet>
         <Menu navigation={navigation} />
         <section className="section-projects">
           <ul

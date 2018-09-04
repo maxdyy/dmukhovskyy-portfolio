@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import $ from "jquery";
 import Menu from "../components/Menu";
 import MasterHead from "../components/MasterHead";
@@ -26,6 +27,9 @@ export default class Home extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Maksym Dmukhovskyy</title>
+        </Helmet>
         <Menu navigation={this.state.navigation} />
         <MasterHead />
         <Modal />
