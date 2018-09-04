@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import Menu from "../components/Menu";
 import FormSuccess from "../components/FormSuccess";
 import Footer from "../components/Footer";
@@ -22,6 +23,9 @@ export default class Success extends Component {
   render() {
     return (
       <div className="succes">
+        <Helmet>
+          <title>Dmukhovskyy - Contact Success</title>
+        </Helmet>
         <Menu navigation={this.state.navigation} />
         <FormSuccess />
         <Footer />

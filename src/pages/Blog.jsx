@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import axios from "axios";
 import { setStorage, getStorage } from "../database/sessionStorage";
 import MASTER_ENDPOINT from "../database/endpoint";
@@ -60,6 +61,9 @@ export default class Blog extends Component {
     ));
     return (
       <div>
+        <Helmet>
+          <title>Dmukhovskyy - Blog</title>
+        </Helmet>
         <Menu navigation={navigation} />
         <div className="section-blog">
           <div className="section-blog__container">
