@@ -1,0 +1,27 @@
+{
+  "name": "dmukhovskyyportfolio",
+  "version": "1.0.0",
+  "description": "Dmukhovskyy portfolio with react server side rendering via NextJS and Express",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxdyy/dmukhovskyyPortfolio.git"
+  },
+  "author": "Maksym Dmukhovskyy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxdyy/dmukhovskyyPortfolio/issues"
+  },
+  "homepage": "https://github.com/maxdyy/dmukhovskyyPortfolio#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "next": "^6.1.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
