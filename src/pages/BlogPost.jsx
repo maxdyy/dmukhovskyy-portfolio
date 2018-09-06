@@ -29,9 +29,6 @@ const makeCodeBeautiful = () => {
   });
 };
 
-const createTwitterThumb = handle =>
-  `https://media.graphcms.com/resize=width:450/${handle}`;
-
 export default class BlogPost extends Component {
   constructor(props) {
     super(props);
@@ -93,13 +90,6 @@ export default class BlogPost extends Component {
         <div>
           <Helmet>
             <title>Dmukhovskyy - {postTitle}</title>
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:site" content="@maxdyy" />
-            <meta name="twitter:title" content={postTitle} />
-            <meta
-              name="twitter:image"
-              content={createTwitterThumb(postImage.handle)}
-            />
           </Helmet>
           <Menu navigation={navigation} />
           <section className="blog-post">
