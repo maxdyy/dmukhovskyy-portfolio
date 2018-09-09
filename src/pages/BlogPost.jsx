@@ -84,7 +84,6 @@ export default class BlogPost extends Component {
     const { navigation, blogPost, notFound } = this.state;
     if (blogPost) {
       const { postTitle, postText, postImage, createdAt } = blogPost;
-      console.log(postImage);
       const creationTime = createdAt.split("T")[0];
       return (
         <div>
