@@ -1,76 +1,76 @@
-const gulp = require('gulp')
-const sass = require('gulp-sass')
-const autoprefixer = require('gulp-autoprefixer')
-const watch = require('gulp-watch')
-const sourcemaps = require('gulp-sourcemaps')
-const rename = require('gulp-rename')
-const notify = require('gulp-notify')
-const timestamp = require('time-stamp')
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
+const watch = require("gulp-watch");
+const sourcemaps = require("gulp-sourcemaps");
+const rename = require("gulp-rename");
+const notify = require("gulp-notify");
+const timestamp = require("time-stamp");
 
-gulp.task('build', function() {
+gulp.task("build", function() {
   return gulp
-    .src('./src/style/style.s*ss')
-    .pipe(sass.sync().on('error', sass.logError))
+    .src("./src/style/style.s*ss")
+    .pipe(sass.sync().on("error", sass.logError))
     .pipe(
       autoprefixer({
-        browsers: ['iOS 7', '> 1%'],
-        grid: true,
+        browsers: ["iOS 7", "> 1%"],
+        grid: true
       })
     )
     .pipe(
       rename({
-        extname: '.min.css',
+        extname: ".min.css"
       })
     )
     .pipe(
       sass({
-        outputStyle: 'compressed',
+        outputStyle: "compressed"
       })
     )
-    .pipe(gulp.dest('./src/style'))
+    .pipe(gulp.dest("./src/style"))
     .pipe(
       notify({
         message: `SUCCESS - SASS => CSS min compiled @ ${timestamp(
-          'HH:mm:ss'
+          "HH:mm:ss"
         )}`,
-        onLast: true,
+        onLast: true
       })
-    )
-})
+    );
+});
 
-gulp.task('watch', function() {
-  notify(`SUCCESS - SASS WATCH STARTED @ ${timestamp('HH:mm:ss')}`).write('')
+gulp.task("watch", function() {
+  notify(`SUCCESS - SASS WATCH STARTED @ ${timestamp("HH:mm:ss")}`).write("");
   return watch(
-    './src/style/components/*.s*ss',
+    "./src/style/components/*.s*ss",
     {
-      ignoreInitial: false,
+      ignoreInitial: false
     },
     function() {
       gulp
-        .src('./src/style/style.s*ss')
+        .src("./src/style/style.s*ss")
         .pipe(sourcemaps.init())
-        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(sass.sync().on("error", sass.logError))
         .pipe(
           autoprefixer({
-            browsers: ['iOS 7', '> 1%'],
-            grid: true,
+            browsers: ["iOS 7", "> 1%"],
+            grid: true
           })
         )
         .pipe(
           rename({
-            extname: '.min.css',
+            extname: ".min.css"
           })
         )
         .pipe(
           sass({
-            outputStyle: 'compressed',
+            outputStyle: "compressed"
           })
         )
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./src/style'))
+        .pipe(sourcemaps.write("."))
+        .pipe(gulp.dest("./src/style"));
     }
-  ).on('change', function(e) {
-    const file = e.split('/').pop()
-    notify(`UPDATED - ${file} @ ${timestamp('HH:mm:ss')}`).write('')
-  })
-})
+  ).on("change", function(e) {
+    const file = e.split("/").pop();
+    notify(`UPDATED - ${file} @ ${timestamp("HH:mm:ss")}`).write("");
+  });
+});
