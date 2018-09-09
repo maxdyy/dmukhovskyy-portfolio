@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import ReactMarkdown from "react-markdown";
 import GraphImg from "graphcms-image";
 import $ from "jquery";
@@ -86,6 +87,9 @@ export default class BlogPost extends Component {
       const creationTime = createdAt.split("T")[0];
       return (
         <div>
+          <Helmet>
+            <title>Dmukhovskyy - {postTitle}</title>
+          </Helmet>
           <Menu navigation={navigation} />
           <section className="blog-post">
             <div className="blog-post__wrapper">
