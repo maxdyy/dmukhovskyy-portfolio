@@ -27,7 +27,7 @@ gulp.task("build", function() {
         outputStyle: "compressed"
       })
     )
-    .pipe(gulp.dest("./src/style"))
+    .pipe(gulp.dest("./src"))
     .pipe(
       notify({
         message: `SUCCESS - SASS => CSS min compiled @ ${timestamp(
@@ -67,7 +67,7 @@ gulp.task("watch", function() {
           })
         )
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest("./src/style"));
+        .pipe(gulp.dest("./src"));
     }
   ).on("change", function(e) {
     const file = e.split("/").pop();
