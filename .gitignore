@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+build
+.next
+
+# misc
+.vscode
+.DS_Store
+
+# source map
+/static/style/style.min.css.map
+mail.js
