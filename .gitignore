@@ -1,8 +1,12 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
+build
+.next
 
-# build
-/.next
-/out
+# misc
+.vscode
+.DS_Store
+
+# source map
+/static/style/style.min.css.map
+mail.js

@@ -1,0 +1,12 @@
+.dm-button {
+  background-color: $DarkShades;
+  color: $LightShades;
+  &:focus {
+    background-color: $DarkShades;
+    color: $LightShades;
+  }
+  &:hover {
+    background-color: $DarkShades;
+    color: $LightShades;
+  }
+}
