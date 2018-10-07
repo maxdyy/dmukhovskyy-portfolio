@@ -7,9 +7,9 @@ const rename = require("gulp-rename");
 const notify = require("gulp-notify");
 const timestamp = require("time-stamp");
 
-gulp.task("build", function () {
+gulp.task("build", function() {
   return gulp
-    .src("./sass/style.s*ss")
+    .src("./scss/style.s*ss")
     .pipe(sass.sync().on("error", sass.logError))
     .pipe(
       autoprefixer({
@@ -38,16 +38,16 @@ gulp.task("build", function () {
     );
 });
 
-gulp.task("watch", function () {
+gulp.task("watch", function() {
   notify(`SUCCESS - SASS WATCH STARTED @ ${timestamp("HH:mm:ss")}`).write("");
   return watch(
-    "./sass/components/*.s*ss",
+    "./scss/components/*.s*ss",
     {
       ignoreInitial: false
     },
-    function () {
+    function() {
       gulp
-        .src("./sass/style.s*ss")
+        .src("./scss/style.s*ss")
         .pipe(sourcemaps.init())
         .pipe(sass.sync().on("error", sass.logError))
         .pipe(autoprefixer({ browsers: ["iOS 7", "> 1%"], grid: true }))
@@ -56,7 +56,7 @@ gulp.task("watch", function () {
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest("./static/style/"));
     }
-  ).on("change", function (e) {
+  ).on("change", function(e) {
     const file = e.split("/").pop();
     notify(`UPDATED - ${file} @ ${timestamp("HH:mm:ss")}`).write("");
   });
