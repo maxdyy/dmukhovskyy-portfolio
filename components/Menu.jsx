@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Link from "next/link";
-// import $ from "jquery";
-// import "materialize-css";
 import { dmukhovskyy_en } from "../localization/content.json";
 
 const { header } = dmukhovskyy_en;
@@ -20,7 +18,9 @@ class Menu extends Component {
     const smartLink = about ? (
       <a href={_smart}>{smart}</a>
     ) : (
-      <Link to={_smart}>{smart}</Link>
+      <Link passHref replace href={_smart}>
+        {smart}
+      </Link>
     );
 
     const smartLinkMob = about ? (
@@ -28,7 +28,7 @@ class Menu extends Component {
         {smart}
       </a>
     ) : (
-      <Link to={_smart} className="close-click">
+      <Link passHref replace href={_smart} className="close-click">
         {smart}
       </Link>
     );
@@ -42,14 +42,16 @@ class Menu extends Component {
         <div className="main-nav-wrapper">
           <nav>
             <div className="nav-wrapper">
-              <Link className="brand-logo" to="">
-                <div className="avatar">
-                  <img src="/avatar.png" alt="Maksym" />
-                  <h1 className="name">
-                    <span>{name}</span>
-                    <span>{surname}</span>
-                  </h1>
-                </div>
+              <Link passHref replace href="/">
+                <a className="brand-logo">
+                  <div className="avatar">
+                    <img src="static/img/avatar.png" alt="Maksym" />
+                    <h1 className="name">
+                      <span>{name}</span>
+                      <span>{surname}</span>
+                    </h1>
+                  </div>
+                </a>
               </Link>
               <a
                 href=""
@@ -63,41 +65,49 @@ class Menu extends Component {
               </a>
               <ul className="right hide-on-med-and-down">
                 <li>
-                  <Link onClick={showModal} to={_home}>
-                    {this.state.home}
+                  <Link passHref replace href={_home}>
+                    <a onClick={showModal}>{this.state.home}</a>
                   </Link>
                 </li>
                 <li>{smartLink}</li>
                 <li>
-                  <Link to={_projects}>{projects}</Link>
+                  <Link passHref replace href={_projects}>
+                    <a>{projects}</a>
+                  </Link>
                 </li>
                 <li>
-                  <Link to={_blog}>{blog}</Link>
+                  <Link passHref replace href={_blog}>
+                    <a>{blog}</a>
+                  </Link>
                 </li>
                 <li>
-                  <Link to={_contact}>{contact}</Link>
+                  <Link passHref replace href={_contact}>
+                    <a>{contact}</a>
+                  </Link>
                 </li>
               </ul>
               <ul className="side-nav" id="mobile-demo">
                 <li>
-                  <Link className="close-click" onClick={showModal} to={_home}>
-                    {this.state.home}
+                  <Link passHref replace href={_home}>
+                    <a className="close-click" onClick={showModal}>
+                      {this.state.home}
+                    </a>
                   </Link>
                 </li>
                 <li> {smartLinkMob}</li>
                 <li>
-                  <Link className="close-click" to={_projects}>
-                    {projects}
+                  <Link passHref replace href={_projects}>
+                    <a className="close-click">{projects}</a>
                   </Link>
                 </li>
                 <li>
-                  <Link to={_blog} className="close-click">
-                    {blog}
+                  <Link passHref replace href={_blog}>
+                    <a className="close-click">{blog}</a>
                   </Link>
                 </li>
                 <li>
-                  <Link className="close-click" to={_contact}>
-                    {contact}
+                  <Link passHref replace href={_contact}>
+                    <a className="close-click">{contact}</a>
                   </Link>
                 </li>
               </ul>
@@ -107,12 +117,6 @@ class Menu extends Component {
       </header>
     );
   }
-  // componentDidMount() {
-  //   $(".button-collapse").sideNav();
-  //   $(".close-click").on("click", function() {
-  //     $("side-nav").sideNav("hide");
-  //   });
-  // }
 }
 
 export default Menu;
