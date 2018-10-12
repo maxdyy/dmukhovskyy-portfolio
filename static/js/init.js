@@ -3,4 +3,5 @@ $(document).ready(function() {
   $(".close-click").on("click", function() {
     $(".side-nav").sideNav("hide");
   });
+  $(".modal").modal();
 });
