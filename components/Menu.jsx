@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import Link from "next/link";
 import { dmukhovskyy_en } from "../localization/content.json";
 
@@ -33,10 +33,6 @@ class Menu extends Component {
       </Link>
     );
 
-    const showModal = () => {
-      $(".modal").modal("open");
-    };
-
     return (
       <header className="main-nav">
         <div className="main-nav-wrapper">
@@ -66,7 +62,7 @@ class Menu extends Component {
               <ul className="right hide-on-med-and-down">
                 <li>
                   <Link passHref replace href={_home}>
-                    <a onClick={showModal}>{this.state.home}</a>
+                    <a>{this.state.home}</a>
                   </Link>
                 </li>
                 <li>{smartLink}</li>
@@ -89,9 +85,7 @@ class Menu extends Component {
               <ul className="side-nav" id="mobile-demo">
                 <li>
                   <Link passHref replace href={_home}>
-                    <a className="close-click" onClick={showModal}>
-                      {this.state.home}
-                    </a>
+                    <a className="close-click">{this.state.home}</a>
                   </Link>
                 </li>
                 <li> {smartLinkMob}</li>

@@ -1,5 +1,9 @@
 import { Component } from "react";
 import Layout from "../components/Layout";
+import MasterHead from "../components/MasterHead";
+import Modal from "../components/Modal";
+import Smart from "../components/Smart";
+import Tech from "../components/Tech";
 
 export default class index extends Component {
   constructor(props) {
@@ -19,6 +23,13 @@ export default class index extends Component {
 
   render() {
     const { navigation } = this.state;
-    return <Layout navigation={navigation}>HELLO</Layout>;
+    return (
+      <Layout navigation={navigation}>
+        <MasterHead />
+        <Modal />
+        <Smart />
+        <Tech />
+      </Layout>
+    );
   }
 }

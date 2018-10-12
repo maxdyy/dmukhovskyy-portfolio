@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import $ from "jquery";
+import { Component } from "react";
 
 export default class Modal extends Component {
   render() {
@@ -9,7 +8,7 @@ export default class Modal extends Component {
           <div className="modal-profile">
             <div className="modal-avatar">
               <div className="avatar-img-wrapper">
-                <img src="avatar.png" alt="Maksym" />
+                <img src="static/img/avatar.png" alt="Maksym" />
               </div>
               <div className="modal-name-contacts">
                 <div className="modal-name">
@@ -111,8 +110,5 @@ export default class Modal extends Component {
         </div>
       </div>
     );
-  }
-  componentDidMount() {
-    $(".modal").modal();
   }
 }

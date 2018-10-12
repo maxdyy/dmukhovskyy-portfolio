@@ -29,7 +29,8 @@
     "nodemailer": "^4.6.8",
     "nprogress": "^0.2.0",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-particles-js": "^2.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
