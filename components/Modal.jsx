@@ -8,7 +8,7 @@ export default class Modal extends Component {
           <div className="modal-profile">
             <div className="modal-avatar">
               <div className="avatar-img-wrapper">
-                <img src="static/img/avatar.png" alt="Maksym" />
+                <img src="/static/img/avatar.png" alt="Maksym" />
               </div>
               <div className="modal-name-contacts">
                 <div className="modal-name">

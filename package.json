@@ -25,11 +25,13 @@
     "babel-plugin-import": "^1.9.1",
     "babel-plugin-inline-import": "^3.0.0",
     "express": "^4.16.3",
+    "graphcms-image": "^1.1.0-beta4",
     "next": "^7.0.1",
     "nodemailer": "^4.6.8",
     "nprogress": "^0.2.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-markdown": "^4.0.3",
     "react-particles-js": "^2.3.0"
   },
   "devDependencies": {
