@@ -12,9 +12,9 @@ app.prepare().then(() => {
   const server = express();
   server.use(bodyParser.json());
   // CUSTOM ROUTES GO HERE
-  server.get("/project/:slug", (req, res) => {
+  server.get("/blogPost/:slug", (req, res) => {
     const mergedQuery = Object.assign({}, req.query, req.params);
-    return app.render(req, res, "/project", mergedQuery);
+    return app.render(req, res, "/blogPost", mergedQuery);
   });
   // THIS IS THE DEFAULT ROUTE, DON'T EDIT THIS
   server.get("*", (req, res) => {

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Component } from "react";
+import Link from "next/link";
 import GraphImg from "graphcms-image";
 import { dmukhovskyy_en } from "../localization/content.json";
 import Button from "./Button";
@@ -31,8 +31,10 @@ export default class BlogItem extends Component {
                 {readtime} {read}
               </span>
             </div>
-            <Link className="blog-item__button" to={`/blog/${id}`}>
-              <Button text={itemButton} type="button" />
+            <Link passHref replace href={`/blogPost/${id}`}>
+              <a>
+                <Button text={itemButton} type="button" />
+              </a>
             </Link>
           </div>
           <div className={`blog-item__type ${postType}`} />

@@ -41,7 +41,7 @@ class Menu extends Component {
               <Link passHref replace href="/">
                 <a className="brand-logo">
                   <div className="avatar">
-                    <img src="static/img/avatar.png" alt="Maksym" />
+                    <img src="/static/img/avatar.png" alt="Maksym" />
                     <h1 className="name">
                       <span>{name}</span>
                       <span>{surname}</span>
