@@ -1,6 +1,6 @@
 const particles = {
   number: {
-    value: 40,
+    value: 15,
     density: {
       enable: true,
       value_area: 1000
