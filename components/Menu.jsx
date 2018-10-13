@@ -19,7 +19,7 @@ class Menu extends Component {
       <a href={_smart}>{smart}</a>
     ) : (
       <Link passHref replace href={_smart}>
-        {smart}
+        <a>{smart}</a>
       </Link>
     );
 
@@ -28,8 +28,8 @@ class Menu extends Component {
         {smart}
       </a>
     ) : (
-      <Link passHref replace href={_smart} className="close-click">
-        {smart}
+      <Link passHref replace href={_smart}>
+        <a className="close-click">{smart}</a>
       </Link>
     );
 

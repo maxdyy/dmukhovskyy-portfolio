@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Component } from "react";
+import Link from "next/link";
 import Button from "./Button";
 import { dmukhovskyy_en } from "../localization/content.json";
 
@@ -16,8 +16,10 @@ export default class FormSuccess extends Component {
           </h5>
         </div>
         <div className="section-success__button">
-          <Link to="/">
-            <Button text={button} type="button" />
+          <Link passHref replace href={"/"}>
+            <a>
+              <Button text={button} type="button" />
+            </a>
           </Link>
         </div>
       </section>

@@ -5,7 +5,7 @@ export default class HeadX extends Component {
   render() {
     return (
       <Head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta
@@ -75,7 +75,7 @@ export default class HeadX extends Component {
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
           integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
         <link
           href="https://fonts.googleapis.com/css?family=Fira+Mono"

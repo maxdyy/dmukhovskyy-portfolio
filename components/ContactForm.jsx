@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-import { Redirect } from "react-router";
-import $ from "jquery";
+import { Component } from "react";
 import Button from "./Button";
+import Router from "next/router";
 
 const encode = data => {
   return Object.keys(data)
@@ -58,7 +57,7 @@ class ContactForm extends Component {
     const { name, email, message, redirect } = this.state;
 
     if (redirect) {
-      return <Redirect to="/success" />;
+      Router.push("/success");
     }
 
     return (
