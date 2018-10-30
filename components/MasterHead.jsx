@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import InitTextScrumble from "../js/textScrumble";
 
 export default class MasterHead extends Component {
@@ -32,5 +32,6 @@ export default class MasterHead extends Component {
 
   componentDidMount() {
     InitTextScrumble();
+    $(".modal").modal();
   }
 }
