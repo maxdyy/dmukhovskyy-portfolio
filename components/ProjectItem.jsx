@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { dmukhovskyy_en } from "../localization/content.json";
 import GraphImg from "graphcms-image";
 
