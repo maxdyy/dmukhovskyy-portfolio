@@ -52,7 +52,7 @@ export default class projects extends Component {
     );
   }
 
-  componentDidUpdate() {
+  componentDidMount() {
     $(".collapsible").collapsible();
   }
 }
