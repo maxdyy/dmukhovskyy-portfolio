@@ -32,4 +32,8 @@ export default class index extends Component {
       </Layout>
     );
   }
+
+  componentDidMount() {
+    $(".scrollspy").scrollSpy();
+  }
 }
