@@ -11,11 +11,13 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
   server.use(bodyParser.json());
+
   // CUSTOM ROUTES GO HERE
   server.get("/blogPost/:slug", (req, res) => {
     const mergedQuery = Object.assign({}, req.query, req.params);
     return app.render(req, res, "/blogPost", mergedQuery);
   });
+
   // THIS IS THE DEFAULT ROUTE, DON'T EDIT THIS
   server.get("*", (req, res) => {
     return handle(req, res);
@@ -36,11 +38,9 @@ app.prepare().then(() => {
       to: CONSTANTS.MAIL_CONSTANTS.toEmail,
       subject: `New Message From ${req.body.name}`,
       html: `
-          <b>Name/Company:</b> ${req.body.name}
+          <b>Name:</b> ${req.body.name}
           <br>
           <b>Email:</b> ${req.body.email}
-          <br>
-          <b>Telephone:</b> ${req.body.tel}
           <br>
           <b>Message:</b> ${req.body.message}
         `

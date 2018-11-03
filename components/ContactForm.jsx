@@ -16,7 +16,7 @@ class ContactForm extends Component {
       name: "",
       email: "",
       message: "",
-      redirect: false
+      submitted: false
     };
   }
 
@@ -38,25 +38,33 @@ class ContactForm extends Component {
       this.validateFeedback(name, message, email);
       e.preventDefault();
     } else {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...this.state })
-      })
-        .then(() => {
-          this.setState({ redirect: true });
-        })
-        .catch(error => alert(error));
-      e.preventDefault();
+      const formData = {
+        name: document.querySelector("input[name='name']").value,
+        email: document.querySelector("input[name='email']").value,
+        message: document.querySelector("textarea[name='message']").value
+      };
+
+      fetch("/api/contact", {
+        method: "post",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      }).then(res => {
+        res.status === 200
+          ? this.setState({ submitted: true })
+          : console.log("Mail submit failed");
+      });
     }
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, message, redirect } = this.state;
+    const { name, email, message, submitted } = this.state;
 
-    if (redirect) {
+    if (submitted) {
       Router.push("/success");
     }
 
@@ -64,11 +72,10 @@ class ContactForm extends Component {
       <section className="contact-form">
         <div className="form-container">
           <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            netlify="true"
-            onSubmit={this.handleSubmit}
+            onSubmit={e => {
+              e.preventDefault();
+              this.handleSubmit(e);
+            }}
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="input-field form-name">
