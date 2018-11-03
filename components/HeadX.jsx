@@ -87,6 +87,9 @@ export default class HeadX extends Component {
         <script src="/static/assets/jquery-3.3.1.min.js" />
         <script src="/static/assets/materialize.min.js" />
 
+        <link rel="stylesheet" href="/static/assets/atom-one-dark.css" />
+        <script src="/static/assets/highlight.pack.js" />
+
         <link rel="stylesheet" href="/static/style/style.min.css" />
         <script src="/static/js/init.js" />
       </Head>
