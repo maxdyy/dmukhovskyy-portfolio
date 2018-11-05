@@ -71,6 +71,25 @@ export default class HeadX extends Component {
           async
           src="https://www.googletagmanager.com/gtag/js?id=UA-124236618-1"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];function gtag() {dataLayer.push(arguments); }gtag('js', new Date());gtag('config', 'UA-124236618-1');`
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function (d, w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter47621770 = new Ya.Metrika2({ id: 47621770, clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true }); } catch (e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2");`
+          }}
+        />
+        <noscript>
+          <div>
+            <img
+              src="https://mc.yandex.ru/watch/47621770"
+              style={{ position: "absolute", left: "-9999px" }}
+              alt=""
+            />
+          </div>
+        </noscript>
         <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
