@@ -1,48 +1,57 @@
 {
-  "name": "app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "dmukhovskyyportfolio",
+  "version": "2.0.0",
+  "description": "Dmukhovskyy Portfolio with NextJS",
+  "scripts": {
+    "cssDev": "gulp watch",
+    "cssBuild": "gulp build",
+    "dev": "node server.js",
+    "build": "gulp build && next build",
+    "deploy": "gulp build && next build && gcloud app deploy",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxdyy/dmukhovskyyPortfolio.git"
+  },
+  "author": "Maksym Dmukhovskyy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxdyy/dmukhovskyyPortfolio/issues"
+  },
+  "homepage": "https://github.com/maxdyy/dmukhovskyyPortfolio#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.2.0",
     "axios": "^0.18.0",
+    "babel-plugin-import": "^1.9.1",
+    "babel-plugin-inline-import": "^3.0.0",
+    "express": "^4.16.3",
     "graphcms-image": "^1.1.0-beta4",
+    "next": "^7.0.1",
+    "nodemailer": "^4.6.8",
+    "nprogress": "^0.2.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-markdown": "^4.0.3",
+    "react-particles-js": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-notify": "^3.2.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-watch": "^5.0.1",
-    "highlight.js": "^9.12.0",
-    "jquery": "^3.3.1",
-    "materialize-css": "^0.100.2",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-helmet": "^5.2.0",
-    "react-markdown": "^3.4.1",
-    "react-particles-js": "^2.3.0",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4"
-  },
-  "scripts": {
-    "cssBuild": "gulp build",
-    "cssDev": "gulp watch",
-    "start": "react-scripts start",
-    "build": "gulp build && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "babel-eslint": "^8.2.6",
-    "eslint": "^5.3.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-config-react-app": "^2.1.0",
-    "eslint-plugin-flowtype": "^2.50.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^2.6.2",
-    "eslint-plugin-react": "^7.10.0",
-    "prettier": "^1.14.0",
-    "prettier-stylelint": "^0.4.2"
+    "prettier": "^1.14.3",
+    "prettier-stylelint": "^0.4.2",
+    "time-stamp": "^2.1.0"
   }
 }
