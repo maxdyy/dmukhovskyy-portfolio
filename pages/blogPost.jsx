@@ -6,6 +6,7 @@ import MASTER_ENDPOINT from "../database/endpoint";
 import { BLOG_POST_QUERY } from "../database/query";
 import { dmukhovskyy_en } from "../localization/content.json";
 import Layout from "../components/Layout";
+import SeoTags from "../components/SeoTags";
 import Random404 from "../components/Random404";
 
 const { items } = dmukhovskyy_en.random404;
@@ -55,6 +56,7 @@ export default class BlogPost extends Component {
       const creationTime = createdAt.split("T")[0];
       return (
         <Layout navigation={navigation}>
+          <SeoTags seoData={this.props.blogPostData} />
           <section className="blog-post">
             <div className="blog-post__wrapper">
               <div className="blog-post__image">
