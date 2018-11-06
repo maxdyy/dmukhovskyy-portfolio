@@ -1,6 +1,20 @@
 {
-  "extends": ["react-app", "plugin:prettier/recommended"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
   "rules": {
-    "jsx-a11y/href-no-hash": [0]
+    "react/prop-types": 0,
+    "react/jsx-uses-vars": [2]
   }
 }
