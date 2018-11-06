@@ -64,6 +64,8 @@ export const BLOG_POST_QUERY = id => {
           postType
           postTitle
           postText
+          postDescription
+          postKeywords
           readtime
       }
     }`;
