@@ -1,7 +1,6 @@
 import { Component } from "react";
 import Router from "next/router";
 import NProgress from "nprogress";
-import NProgressStyle from "nprogress/nprogress.css";
 import HeadX from "./HeadX";
 import Menu from "./Menu";
 import Footer from "./Footer";
@@ -24,7 +23,15 @@ export default class Layout extends Component {
     return (
       <div className="root-layout">
         <HeadX />
-        <style dangerouslySetInnerHTML={{ __html: NProgressStyle }} />
+        <noscript>
+          <div>
+            <img
+              src="https://mc.yandex.ru/watch/47621770"
+              style={{ position: "absolute", left: "-9999px" }}
+              alt=""
+            />
+          </div>
+        </noscript>
         <Menu navigation={navigation} />
         {this.props.children}
         <Footer />

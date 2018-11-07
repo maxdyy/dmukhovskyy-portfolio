@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Head from "next/head";
+import NProgressStyle from "nprogress/nprogress.css";
 
 export default class HeadX extends Component {
   render() {
@@ -81,15 +82,6 @@ export default class HeadX extends Component {
             __html: `(function (d, w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter47621770 = new Ya.Metrika2({ id: 47621770, clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true }); } catch (e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2");`
           }}
         />
-        <noscript>
-          <div>
-            <img
-              src="https://mc.yandex.ru/watch/47621770"
-              style={{ position: "absolute", left: "-9999px" }}
-              alt=""
-            />
-          </div>
-        </noscript>
         <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
@@ -102,6 +94,7 @@ export default class HeadX extends Component {
         />
         <link rel="stylesheet" href="/static/assets/materialize.min.css" />
         <link rel="stylesheet" href="/static/assets/emoji.min.css" />
+        <style dangerouslySetInnerHTML={{ __html: NProgressStyle }} />
 
         <script src="/static/assets/jquery-3.3.1.min.js" />
         <script src="/static/assets/materialize.min.js" />
