@@ -13,6 +13,14 @@ app.prepare().then(() => {
   server.use(bodyParser.json());
 
   // CUSTOM ROUTES GO HERE
+  server.get("/robots.txt", (req, res) => {
+    return res.redirect("static/robots.txt");
+  });
+
+  server.get("/sitemap.txt", (req, res) => {
+    return res.redirect("static/sitemap.xml");
+  });
+
   server.get("/blogPost/:slug", (req, res) => {
     const mergedQuery = Object.assign({}, req.query, req.params);
     return app.render(req, res, "/blogPost", mergedQuery);
