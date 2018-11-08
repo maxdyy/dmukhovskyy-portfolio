@@ -6,8 +6,8 @@
     "cssDev": "gulp watch",
     "cssBuild": "gulp build",
     "dev": "node server.js",
-    "build": "gulp build && next build",
-    "deploy": "gulp build && next build && gcloud app deploy",
+    "build": "node ./scripts/siteMapExport.js && gulp build && next build",
+    "deploy": "node ./scripts/siteMapExport.js && gulp build && next build && gcloud app deploy",
     "start": "NODE_ENV=production node server.js"
   },
   "repository": {

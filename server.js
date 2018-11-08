@@ -17,7 +17,7 @@ app.prepare().then(() => {
     return res.redirect("static/robots.txt");
   });
 
-  server.get("/sitemap.txt", (req, res) => {
+  server.get("/sitemap.xml", (req, res) => {
     return res.redirect("static/sitemap.xml");
   });
 
