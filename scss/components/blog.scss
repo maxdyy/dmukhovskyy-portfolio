@@ -91,9 +91,11 @@
         margin-left: 20px;
         display: flex;
         flex-direction: column;
+        width: calc(100% - 135px);
         @include defaultMobile {
           margin: 0;
           text-align: center;
+          width: auto;
         }
         &__title {
           font-weight: 400;
