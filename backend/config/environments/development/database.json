@@ -1,0 +1,21 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-mongoose",
+      "settings": {
+        "client": "mongo",
+        "host": "ds115244.mlab.com",
+        "srv": false,
+        "port": "15244",
+        "database": "dmukhovskyy",
+        "username": "maxdyy",
+        "password": "nimda0000"
+      },
+      "options": {
+        "authenticationDatabase": "dmukhovskyy",
+        "ssl": false
+      }
+    }
+  }
+}
