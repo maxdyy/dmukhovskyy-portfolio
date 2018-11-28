@@ -5,12 +5,12 @@
       "connector": "strapi-hook-mongoose",
       "settings": {
         "client": "mongo",
-        "host": "ds115244.mlab.com",
+        "host": "ds119374.mlab.com",
         "srv": false,
-        "port": "15244",
+        "port": "19374",
         "database": "dmukhovskyy",
         "username": "maxdyy",
-        "password": "nimda0000"
+        "password": "admin00"
       },
       "options": {
         "authenticationDatabase": "dmukhovskyy",

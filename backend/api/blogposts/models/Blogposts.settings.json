@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "blogposts",
+  "info": {
+    "name": "blogposts",
+    "description": "Blog Posts"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Blog Post Title": {
+      "default": "",
+      "type": "string"
+    },
+    "Blog Post Text": {
+      "default": "",
+      "type": "text"
+    },
+    "Published": {
+      "default": false,
+      "type": "boolean"
+    },
+    "Blog Post Hero Image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
