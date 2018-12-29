@@ -1,12 +1,12 @@
 const express = require("express");
 const next = require("next");
 const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
 const CONSTANTS = require("./mail");
 
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
+const Sendgrid = require("sendgrid")(CONSTANTS.MAIL_CONSTANTS.SENDGRID_API_KEY);
 
 app.prepare().then(() => {
   const server = express();
@@ -33,39 +33,48 @@ app.prepare().then(() => {
 
   // POST EMAIL
   server.post("/api/contact", (req, res) => {
-    let transporter = nodemailer.createTransport({
-      service: "Gmail",
-      auth: {
-        user: CONSTANTS.MAIL_CONSTANTS.serverEmail,
-        pass: CONSTANTS.MAIL_CONSTANTS.serverEmailPass
+    const sgReq = Sendgrid.emptyRequest({
+      method: "POST",
+      path: "/v3/mail/send",
+      body: {
+        personalizations: [
+          {
+            to: [{ email: CONSTANTS.MAIL_CONSTANTS.toEmail }],
+            subject: `Dmukhovskyy Portfolio enquiry from: ${req.body.name}`
+          }
+        ],
+        from: {
+          email: req.body.email,
+          name: req.body.name
+        },
+        content: [
+          {
+            type: "text/plain",
+            value: `
+              Name/Company: ${req.body.name}
+              Email: ${req.body.email}
+              Message: ${req.body.message}
+            `
+          }
+        ]
       }
     });
 
-    let mailOptions = {
-      from: CONSTANTS.MAIL_CONSTANTS.fromEmail,
-      to: CONSTANTS.MAIL_CONSTANTS.toEmail,
-      subject: `New Message From ${req.body.name}`,
-      html: `
-          <b>Name:</b> ${req.body.name}
-          <br>
-          <b>Email:</b> ${req.body.email}
-          <br>
-          <b>Message:</b> ${req.body.message}
-        `
-    };
-
-    transporter.sendMail(mailOptions, function(err) {
-      if (err) console.log(err);
-      else console.log("Email Sent!");
+    Sendgrid.API(sgReq, err => {
+      if (err) {
+        console.log(err);
+        res.send("error");
+      } else {
+        console.log("Email Sent! 📧");
+        res.send("success");
+      }
     });
-
-    res.send("success");
   });
 
   const port = process.env.PORT || 3000;
 
   server.listen(port, err => {
     if (err) throw err;
-    console.log(`> Ready to rock & roll on port:${port} 😎 🔥`);
+    console.log(`Ready to rock & roll on port --> ${port} 😎 🔥`);
   });
 });
