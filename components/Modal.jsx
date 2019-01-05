@@ -75,16 +75,17 @@ export default class Modal extends Component {
             <div className="modal-about">
               <h2>About Me</h2>
               <p>
-                I’m a Front-end Developer with one year of commercial
+                I’m a Front-end Engineer with two years of commercial
                 experience.
                 <br />
                 <br />
                 Since turning my passion into a career, I’ve worked hard to
                 learn and improve my skills.
                 <br />
-                During last year I’ve had great opportunities to work with big
-                fashion brands and even participate at a well known fashion
-                event as an on-field Front-end Developer.
+                <br />
+                During last years I’ve had great opportunities to work with big
+                fashion brands and help building ecommerce platforms for
+                world-renowned companies.
                 <br />
                 <br />
                 Today I'm thrilled more than ever to be a part of such an
