@@ -1,0 +1,46 @@
+{
+  "dmukhovskyy_en": {
+    "header": {
+      "name": "Maksym",
+      "surname": "Dmukhovskyy",
+      "search": "Search in blog posts",
+      "twitter": {
+        "user": "@maxdyy",
+        "link": "https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fmaterializecss.com%2Ffooter.html&ref_src=twsrc%5Etfw&region=follow_link&screen_name=maxdyy&tw_p=followbutton"
+      },
+      "github": {
+        "user": "maxdyy",
+        "link": "https://github.com/maxdyy"
+      },
+      "linkedIn": {
+        "user": "Maksym Dmukhovskyy",
+        "link": "https://www.linkedin.com/in/maxdyy"
+      }
+    },
+    "blog": {
+      "itemButton": "Read",
+      "read": "read"
+    },
+    "footer": {
+      "copyright": "© 2017-2018 Maksym Dmukhovskyy",
+      "gitRepo": "https://github.com/maxdyy/dmukhovskyyPortfolio",
+      "license": "MIT License"
+    },
+    "random404": {
+      "message": "You found a",
+      "items": {
+        "Banana": "ec-banana",
+        "Puppy": "ec-dog",
+        "Monkey": "ec-monkey",
+        "Chick": "ec-hatched-chick",
+        "Unicorn": "ec-unicorn",
+        "Turtle": "ec-turtle",
+        "Doplhin": "ec-dolphin",
+        "Carrot": "ec-carrot",
+        "Pizza": "ec-pizza",
+        "Kitty": "ec-cat"
+      },
+      "button": "Back Home"
+    }
+  }
+}

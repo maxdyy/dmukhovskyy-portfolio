@@ -1,12 +1,13 @@
 {
   "name": "dmukhovskyyportfolio",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Only Blog",
   "main": "/pages/index.jsx",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "node server.js",
+    "build": "node ./scripts/siteMapExport.js && next build",
+    "deploy": "node ./scripts/siteMapExport.js && next build && gcloud app deploy",
+    "start": "NODE_ENV=production node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,16 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "antd": "^3.11.6",
+    "axios": "^0.18.0",
     "babel-plugin-import": "^1.11.0",
     "babel-plugin-inline-import": "^3.0.0",
+    "express": "^4.16.4",
+    "graphcms-image": "^1.1.0-beta4",
     "next": "^7.0.2",
     "node-sass": "^4.11.0",
+    "nprogress": "^0.2.0",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "react-markdown": "^4.0.6"
   }
 }
