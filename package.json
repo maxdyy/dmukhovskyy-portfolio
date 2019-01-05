@@ -1,0 +1,31 @@
+{
+  "name": "dmukhovskyyportfolio",
+  "version": "2.0.0",
+  "description": "Only Blog",
+  "main": "/pages/index.jsx",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxdyy/dmukhovskyyPortfolio.git"
+  },
+  "author": "Maksym Dmukhovsky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxdyy/dmukhovskyyPortfolio/issues"
+  },
+  "homepage": "https://github.com/maxdyy/dmukhovskyyPortfolio#readme",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "antd": "^3.11.6",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-inline-import": "^3.0.0",
+    "next": "^7.0.2",
+    "node-sass": "^4.11.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
